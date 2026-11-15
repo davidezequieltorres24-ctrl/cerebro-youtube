@@ -1,11 +1,15 @@
 # Cerebro YouTube
 
-Base de conocimiento para crear y hacer crecer canales de YouTube (foco: canales faceless hechos con IA).
+Base de conocimiento para el canal **Cerebro Caro** (psicología del dinero, faceless, español neutro, hecho con IA).
 Leé SOLO el archivo que necesite la tarea.
 
 | Tarea | Leer |
 |---|---|
 | Datos de MI canal (nicho, tono, métricas) | `canal/identidad.md` |
+| Colores, fuente, logo, miniaturas del canal | `canal/branding.md` |
+| Ideas de videos y calendario | `canal/plan-contenido.md` |
+| Pasos para lanzar el canal | `canal/lanzamiento.md` |
+| Historial y métricas de videos | `contenido/publicados.md` |
 | Escribir guion / mejorar retención | `conocimiento/guiones-retencion.md` |
 | Títulos y miniaturas | `conocimiento/titulos-miniaturas.md` |
 | Producir el video con IA (Claude Code, voz, animación) | `conocimiento/produccion-ia.md` |
@@ -13,7 +17,7 @@ Leé SOLO el archivo que necesite la tarea.
 | De dónde salió cada dato | `fuentes.md` |
 
 ## Reglas de oro (resumen de todo)
-1. El título habla de **"vos"**, no del tema ("Por qué nunca querrías conocer a X").
+1. El título habla de **"tú"** (en los guiones del canal: español neutro con "tú"), no del tema ("Por qué nunca querrías conocer a X").
 2. Empezar **dentro de la escena** ("Imaginá esto…"), nunca "En este video…". Cerrar volviendo al inicio.
 3. **Cada frase tiene su imagen** en pantalla.
 4. Si un video funcionó, **repetir la misma promesa** (formato) en los siguientes.
