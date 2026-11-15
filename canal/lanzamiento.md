@@ -2,7 +2,7 @@
 
 ## Semana 0: setup
 - [ ] Crear cuenta de Google exclusiva para el canal
-- [ ] Crear canal "Cerebro Caro" y reservar el handle `@CerebroCaro`
+- [ ] Crear canal "Tu Mente Gasta" y reservar el handle `@TuMenteGasta`
 - [ ] Logo + banner (Canva, ver `branding.md`)
 - [ ] Descripción + links (próximamente: infoproducto)
 - [ ] Instalar en Claude Code: Three.js + Remotion + skill de estilo

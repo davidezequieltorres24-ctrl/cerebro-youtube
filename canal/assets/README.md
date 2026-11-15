@@ -29,3 +29,7 @@
 2. Inspiración de miniaturas en OTROS nichos (Zyka, KnowSense) → como referencia de composición.
 3. Diseño: regla de tercios (figura chica a la izquierda, objeto gigante a la derecha), paleta fija, máx. 2 palabras, acento rojo.
 4. Test en la vista previa de YouTube + score.
+
+## Nota (cambio de nombre a Tu Mente Gasta)
+- El banner y el logo de mascota NO llevan el nombre del canal: siguen valiendo tal cual.
+- Los 4 logos de Canva llevan el texto "CEREBRO CARO": NO usar.

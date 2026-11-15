@@ -1,4 +1,4 @@
-# Plan de contenido: Cerebro Caro
+# Plan de contenido: Tu Mente Gasta
 
 ## Estructura fija de cada video (de `conocimiento/guiones-retencion.md`)
 1. "Imagina esto…" → estás en una escena cotidiana (súper, celular a las 2 a. m., cobro del sueldo).

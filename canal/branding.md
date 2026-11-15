@@ -1,4 +1,4 @@
-# Branding: Cerebro Caro
+# Branding: Tu Mente Gasta
 
 ## Paleta (regla: principal + negro + blanco + intermedio + resaltado que rota)
 | Rol | Color | Hex |
@@ -29,4 +29,4 @@
 - Testear en thumbsup.tv antes de publicar.
 
 ## Descripción del canal
-> Tu cerebro no fue diseñado para manejar dinero. Fue diseñado para sobrevivir en la selva. En Cerebro Caro te muestro, con animaciones simples, las trampas mentales que te hacen gastar, endeudarte y no ahorrar, y cómo salir de cada una. Nuevos videos martes y viernes.
+> Tu cerebro no fue diseñado para manejar dinero. Fue diseñado para sobrevivir en la selva. En Tu Mente Gasta te muestro, con animaciones simples, las trampas mentales que te hacen gastar, endeudarte y no ahorrar, y cómo salir de cada una. Nuevos videos martes y viernes.

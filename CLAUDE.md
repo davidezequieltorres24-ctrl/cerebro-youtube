@@ -1,6 +1,6 @@
 # Cerebro YouTube
 
-Base de conocimiento para el canal **Cerebro Caro** (psicología del dinero, faceless, español neutro, hecho con IA).
+Base de conocimiento para el canal **Tu Mente Gasta** (psicología del dinero, faceless, español neutro, hecho con IA).
 Leé SOLO el archivo que necesite la tarea.
 
 | Tarea | Leer |
