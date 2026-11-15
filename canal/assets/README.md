@@ -41,3 +41,7 @@
   2. https://www.canva.com/d/mwCpzUlXYyA9JZf
   3. https://www.canva.com/d/rHTwtGh_11H2ezD
   4. https://www.canva.com/d/4iqjJERWuExDiOq
+
+## Video "Por qué la gente que parece pobre tiene más dinero que tú"
+- `video-parece-pobre-miniatura.png`: score vidIQ **48/100** (bajo). Fallas: demasiado cargada (los fajos de billetes) y "poca energía".
+  - Arreglo pendiente: simplificar la bóveda (menos billetes, más grande), más saturación y quitar el personaje de la derecha o achicarlo. Regenerar cuando se renueven los créditos de vidIQ (15/12) o editar en Canva.
