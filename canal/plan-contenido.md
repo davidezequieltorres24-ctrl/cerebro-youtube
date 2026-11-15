@@ -35,12 +35,22 @@
 | 19 | Por qué los supermercados ponen la leche al fondo | AL FONDO | Diseño de supermercados |
 | 20 | Por qué los ricos piensan distinto el dinero (y tú no) | NO ES SUERTE | Mentalidad de largo plazo / interés compuesto |
 
+## Ideas modeladas de ganadores reales (ver `competencia.md`) ⭐ PRIORIDAD
+| Título | Miniatura | Modela a (vistas) |
+|---|---|---|
+| Por qué la gente que parece pobre tiene más dinero que tú | PARECE POBRE | NicoFinanzas "Parecer pobre" (562K) |
+| Tu vida en cada nivel de sueldo (y la trampa de cada uno) | $500 → $10.000 | "Tu vida en cada nivel de ingresos" (312K) |
+| Por qué aceptar ese ascenso te puede salir caro | NO ACEPTES | "Principio de Peter" (212K) |
+| Por qué tu auto nuevo te hace más pobre | TE ESTÁ COMIENDO | "Tu auto de 10 años" (128K) |
+| Por qué el banco te sube el límite sin que lo pidas | NO ES UN REGALO | "Te ofrecen tanto crédito" (108K) |
+| Por qué la clase media confunde deuda con progreso | ¿PROGRESO? | "10 trampas de la clase media" (92K) |
+
 ## Primeros 5 videos (lanzamiento, misma promesa)
-Orden recomendado: **#2, #1, #4, #9, #3** (gancho cotidiano fuerte primero; #3 tiene el mejor "giro").
+Orden recomendado (actualizado con datos): **Parece pobre → Tarjeta (#2) → Niveles de sueldo → #1 → Auto nuevo**. Duración objetivo: **12–15 min**.
 
 ## Shorts
 - De cada video largo: 2–3 Shorts de 30–50 s con la escena "Imagina esto" + giro + "video completo en el canal".
 
 ## Calendario
-- Martes y viernes: video largo. Lunes, miércoles y sábado: Short.
+- Martes y viernes: video largo (12–15 min). Lunes, miércoles y sábado: Short.
 - Meta de los primeros 30 días: 8 largos + 15 Shorts.

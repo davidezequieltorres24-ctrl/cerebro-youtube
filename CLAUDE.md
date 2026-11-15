@@ -9,6 +9,7 @@ Leé SOLO el archivo que necesite la tarea.
 | Colores, fuente, logo, miniaturas del canal | `canal/branding.md` |
 | Ideas de videos y calendario | `canal/plan-contenido.md` |
 | Pasos para lanzar el canal | `canal/lanzamiento.md` |
+| Competencia, canales modelo y qué temas funcionan | `canal/competencia.md` |
 | Historial y métricas de videos | `contenido/publicados.md` |
 | Escribir guion / mejorar retención | `conocimiento/guiones-retencion.md` |
 | Títulos y miniaturas | `conocimiento/titulos-miniaturas.md` |
