@@ -33,3 +33,11 @@
 ## Nota (cambio de nombre a Tu Mente Gasta)
 - El banner y el logo de mascota NO llevan el nombre del canal: siguen valiendo tal cual.
 - Los 4 logos de Canva llevan el texto "CEREBRO CARO": NO usar.
+
+## Logo v2 (Tu Mente Gasta) ✅ recomendado
+- `logo-v2-800.png`: misma mascota, corriendo con la tarjeta y los billetes volando, fondo verde billete. Se lee bien a 48 px.
+- Alternativas en Canva con el texto "TU MENTE GASTA":
+  1. https://www.canva.com/d/e6Hndg0SK68wGs8
+  2. https://www.canva.com/d/mwCpzUlXYyA9JZf
+  3. https://www.canva.com/d/rHTwtGh_11H2ezD
+  4. https://www.canva.com/d/4iqjJERWuExDiOq
