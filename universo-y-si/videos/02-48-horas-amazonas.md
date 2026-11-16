@@ -1,6 +1,6 @@
 # Video 2 — ¿Y si estuvieras 48 horas perdido en la selva amazónica?
 
-**Estado:** guion en borrador (esperando OK del dueño) + miniatura principal lista (16/11/2026).
+**Estado:** ✅ video terminado (16/11/2026): `produccion/remotion/out/uys2-amazonas-YOUTUBE.mp4` (9:14, 1080p, −14 LUFS) enviado al dueño; copia liviana `out/uys2-amazonas-repo.mp4`. Falta: descripción con capítulos reales.
 **Guion:** `universo-y-si/guiones/02-48-horas-amazonas.md` (~1.370 palabras, ~8:50 estimado).
 **Formato:** lugar extremo real (plantilla B).
 
