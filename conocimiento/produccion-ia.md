@@ -84,3 +84,4 @@
 - Velocidad real: ~25–60 min por parte de 1:40 de video (4 CPU). Revisar 2 cuadros en cada unión antes de entregar.
 - Tiempos por palabra: `python3 scripts/tiempos_whisper.py voz.wav src/words-vN.json`.
 - Voz: en el texto para TTS escribir los números **en letras** ("ochenta y siete dólares") y pausas con "…"; en pantalla van en cifras.
+- Límite para mandar archivos por el chat: **400 MiB**. Un video de ~9 min a 6 Mbps pasa (409 MiB) → recomprimir a ~4,8 Mbps (`-b:v 4800k`, audio copiado) y queda en ~330 MiB sin pérdida visible.
