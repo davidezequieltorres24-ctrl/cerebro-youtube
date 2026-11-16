@@ -18,3 +18,4 @@ produccion/remotion/out/raw-*.mp4
 produccion/remotion/out/*-part*.mp4
 produccion/remotion/out/*-audio.wav
 produccion/remotion/out/*-list.txt
+__pycache__/
