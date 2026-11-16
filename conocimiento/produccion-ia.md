@@ -33,3 +33,13 @@
 - ElevenLabs gratis: 10.000 créditos/mes y **solo 3 imágenes por día**. Un video de 12–15 min necesita ~60–80 escenas → hace falta plan pago (o repartir en días).
 - Canva genera imágenes pero no deja bajarlas en alta resolución desde aquí.
 - vidIQ: 150 créditos/mes (miniatura = 22).
+
+## ✅ Escala: APIMart para las imágenes (desde 16/11/2026)
+- **Nano Banana 2** (`gemini-3.1-flash-image-preview`) vía `https://api.apimart.ai/v1/images/generations`, 2K, 16:9, con `image_urls` = hoja de personajes + 2 escenas de estilo.
+- Costo real: **~US$0,014 por imagen** (62 escenas ≈ US$0,87). La clave está guardada en el entorno `cerebro-youtube` (la inyecta el proxy).
+- Script: `produccion/remotion/gen_apimart.py escenas.json` (sube, espera y descarga a `public/escenas/`).
+- Referencias: subir con `POST /v1/uploads/images?retention_days=3` (las URLs vencen a los 3 días → volver a subir).
+- Voz: ElevenLabs v4 (gratis alcanza ~7 min/mes). Se procesa: `atempo=1.15` + compresor + `loudnorm I=-16`.
+- **Mezcla aprobada**: voz −16 LUFS · efectos normalizados a −26 LUFS y al 45% · música −16 LUFS al 7%. Master final a −14 LUFS.
+- Montaje del video completo: `src/plan.ts` (1 escena por frase, overlays y tableros) + `src/FullVideo.tsx`. Tiempos de frases alineados con Whisper (`src/lines-full.json`).
+- Render: ~1 h 30 min para 7 min de video (4 CPU).

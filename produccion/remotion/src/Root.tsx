@@ -1,6 +1,10 @@
 import React from 'react';
 import {Composition} from 'remotion';
 import {ParecePobre, TOTAL_FRAMES} from './ParecePobre';
+import {FullVideo, FULL_FRAMES} from './FullVideo';
 export const RemotionRoot: React.FC = () => (
-  <Composition id="ParecePobre" component={ParecePobre} durationInFrames={TOTAL_FRAMES} fps={30} width={1920} height={1080} />
+  <>
+    <Composition id="ParecePobre" component={ParecePobre} durationInFrames={TOTAL_FRAMES} fps={30} width={1920} height={1080} />
+    <Composition id="FullVideo" component={FullVideo} durationInFrames={FULL_FRAMES} fps={30} width={1920} height={1080} />
+  </>
 );

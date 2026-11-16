@@ -355,7 +355,7 @@ const SFX: [number, string, number][] = [
 
 export const ParecePobre: React.FC = () => {
   const frame = useCurrentFrame();
-  const musicVol = interpolate(frame, [0, 15, TOTAL_FRAMES - 45, TOTAL_FRAMES], [0, 0.06, 0.06, 0], {extrapolateRight: 'clamp'});
+  const musicVol = interpolate(frame, [0, 15, TOTAL_FRAMES - 45, TOTAL_FRAMES], [0, 0.08, 0.08, 0], {extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill style={{background: C.bg}}>
       {SCENES.map(([s, e, Comp], i) => (
@@ -364,11 +364,11 @@ export const ParecePobre: React.FC = () => {
         </Sequence>
       ))}
       <Captions />
-      <Audio src={staticFile('voz-rapida.mp3')} />
-      <Audio src={staticFile('musica.mp3')} volume={() => musicVol} />
+      <Audio src={staticFile('voz-final.mp3')} />
+      <Audio src={staticFile('n-musica.mp3')} volume={() => musicVol} />
       {SFX.map(([s, file, vol], i) => (
         <Sequence key={`sfx${i}`} from={f(s)} durationInFrames={f(3)}>
-          <Audio src={staticFile(file)} volume={vol * 0.35} />
+          <Audio src={staticFile('n-' + file)} volume={0.5} />
         </Sequence>
       ))}
     </AbsoluteFill>
