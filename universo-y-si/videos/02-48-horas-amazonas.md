@@ -23,6 +23,41 @@
 3. `assets/02-amazonas-48h-miniatura-3-hormiga.jpg` — "24 H DE DOLOR": hormiga bala gigante + TÚ llorando con la mano hinchada (objeto raro + shock).
 - Código para rehacerlas: `produccion/remotion/miniaturas_uys2.py` (dibujos `public/uys-2/mini-d/e/f.png`; el chico de e/f usa mini-d como referencia para que sea el mismo).
 
-**Título:** ¿Y si estuvieras 48 horas perdido en la selva amazónica?
+**Títulos (subir los 3 a "Probar y comparar"):**
+1. ¿Y si estuvieras 48 horas perdido en la selva amazónica?  ← principal (igual al gancho)
+2. ¿Y si te perdieras 48 horas en el Amazonas?
+3. ¿Podrías sobrevivir 48 horas perdido en la selva amazónica?
 
-Descripción, capítulos y etiquetas: se completan con los tiempos reales cuando esté la voz.
+**Descripción:**
+```
+¿Y si estuvieras 48 horas perdido en la selva amazónica? Sin señal, con el celular al 31 %, una linterna casi muerta y medio sándwich de pollo. A 150 metros del sendero… que ya no sabes en qué dirección queda.
+
+Un silbato naranja, una regla que te contaron en una canoa, una hormiga que duele 24 horas y un mono que no deja de robarte cosas. Tienes 48 horas para salir.
+
+CAPÍTULOS
+0:00 150 metros
+0:19 Tres pitidos es auxilio
+1:19 La selva sin sol
+2:01 Las tres reglas
+2:36 La selva se apaga
+3:37 Tu jaguar
+4:05 La hormiga 24
+4:41 Seguir el agua
+5:47 El error más tonto
+6:46 Buenas noches a ustedes también
+7:42 Menos de un minuto
+8:22 La gorra
+8:58 ¿Y tú qué harías?
+
+¿Seguirías el agua como Juliane o te quedarías quieto esperando que te encuentren? Te leo en los comentarios.
+
+Suscríbete. El mono todavía tiene tu gorra.
+
+La historia es ficción, pero los datos son reales: la hormiga bala, los monos aulladores, la anguila eléctrica de 860 voltios y Juliane Koepcke, que en 1971 sobrevivió 11 días en esta selva siguiendo el agua. Ningún mono fue indemnizado por la gorra.
+
+#yquepasariasi #amazonas #supervivencia
+```
+
+**Etiquetas:** y si estuvieras perdido en la selva amazónica, 48 horas en el amazonas, perdido en la selva, selva amazónica, amazonas, qué pasaría si, y si, sobrevivir en la selva, supervivencia, historia animada, animación, juliane koepcke, hormiga bala, monos aulladores, jaguar, qué harías si, historia pov
+
+**Al subir:** No es para niños · Cine y animación · Contenido alterado o sintético: Sí (voz e imágenes con IA).
