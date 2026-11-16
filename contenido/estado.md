@@ -5,10 +5,12 @@
 |---|---|---|---|
 | 1 | Por qué la gente que parece pobre tiene más dinero que tú | ✅ **Publicado** | guion `produccion/guiones/01-parece-pobre.md` · plan `produccion/remotion/src/plan.ts` + `FullVideo.tsx` · miniaturas `canal/assets/video1-parece-pobre-A-iceberg.jpg` (principal) y `-B-comparacion.jpg` · subida `contenido/01-parece-pobre-subida.md` |
 | 2 | Tu vida en cada nivel de sueldo (y la trampa de cada uno) | ✅ **Listo para subir** (8:59, `out/video2-YOUTUBE.mp4` enviado al dueño; capítulos en la ficha) | guion `produccion/guiones/02-cada-nivel-de-sueldo.md` · plan `produccion/remotion/src/plan2.ts` + `Video2.tsx` · escenas `public/escenas2/` · miniatura `canal/assets/video2-niveles-sueldo-miniatura.jpg` ("SUBES… Y CAES") · subida `contenido/02-niveles-sueldo-subida.md` |
-| 3 | Por qué gastas más cuando pagas con tarjeta | ✅ **Listo para subir** (4:53, estilo neón/líneas brillantes, `out/video3-YOUTUBE.mp4` enviado al dueño; copia liviana `out/video3-repo.mp4`) | guion `produccion/guiones/03-tarjeta.md` · plan `src/plan3.ts` + `src/Video3.tsx` · escenas `public/escenas3/` · voz `public/v3/voz-video3.mp3` · miniaturas `canal/assets/video3-tarjeta-1/2/3-*.jpg` · subida `contenido/03-tarjeta-subida.md` |
+| 3 | Por qué gastas más cuando pagas con tarjeta | 🔄 **Re-renderizando con correcciones** (títulos que cortaban palabras, subtítulos por frase) | guion `produccion/guiones/03-tarjeta.md` · plan `src/plan3.ts` + `src/Video3.tsx` · escenas `public/escenas3/` · voz `public/v3/voz-video3.mp3` · miniaturas `canal/assets/video3-tarjeta-1/2/3-*.jpg` · subida `contenido/03-tarjeta-subida.md` |
 
 ## En marcha ahora
-- Nada. Videos 2 y 3 listos para subir (fichas en `contenido/02-…` y `contenido/03-tarjeta-subida.md`).
+- **Re-render del video 3** con correcciones del dueño (16/11): títulos subrayados cortaban palabras ("CUERP/O", "MAR/CA") → ahora se corta solo entre palabras, tamaño que entra en 1 renglón y subrayado del ancho del texto; subtítulos ahora por frase completa (`src/captionChunks.ts`), palabra actual en amarillo; imagen de la lista más larga.
+  - Script: `bash /tmp/claude-0/-home-user-cerebro-youtube/7da7cb3a-58e0-52fd-a95a-86b2766ffad0/scratchpad/render-v3.sh` (render + volumen + copia liviana; log `render-v3.log` en el mismo lugar, termina en `DONE`).
+  - Cuando termine: mandar `out/video3-YOUTUBE.mp4` al dueño y commitear `out/video3-repo.mp4`.
 
 ## Estilo nuevo (desde el video 3)
 - Estilo Isaac: neón sobre negro + dibujo de líneas brillantes (ámbar normal · rojo problema · verde solución). Análisis en `conocimiento/formatos-visuales.md`.

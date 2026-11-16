@@ -78,7 +78,7 @@ export const PLAN3: Sc[] = [
   {a: 'y esos antojos', b: {k: 'sum'}, sfx: [{s: 'pop', at: '2', v: 0.4}, {s: 'pop', at: '3', v: 0.4}, {s: 'pop', at: '5', v: 0.45}, {s: 'demo3/sfx-impact.mp3', at: 'cientos', v: 0.6}]},
   {a: 'la solucion decide', b: {k: 'title', text: 'DECIDE ANTES DE ENTRAR', c: G, size: 110, line: true}, stamp: 'S', leak: true, sfx: [{s: 'pop', v: 0.4}]},
   {a: 'haz la lista', img: E('i21'), tint: 'green', fx: 0.45, fy: 0.55},
-  {a: 'y para las categorias', img: E('i22'), tint: 'green', fx: 0.5, fy: 0.6, labels: [{t: 'salidas', x: 0.2, y: 0.18, at: 'salidas', c: G, size: 74}, {t: 'delivery', x: 0.5, y: 0.12, at: 'delivery', c: G, size: 74}, {t: 'antojos', x: 0.8, y: 0.18, at: 'antojos', c: G, size: 74}], sfx: [{s: 'pop', at: 'salidas', v: 0.35}, {s: 'pop', at: 'delivery', v: 0.35}, {s: 'pop', at: 'antojos', v: 0.35}]},
+  {a: 'como salidas', img: E('i22'), tint: 'green', fx: 0.5, fy: 0.6, labels: [{t: 'salidas', x: 0.2, y: 0.18, at: 'salidas', c: G, size: 74}, {t: 'delivery', x: 0.5, y: 0.12, at: 'delivery', c: G, size: 74}, {t: 'antojos', x: 0.8, y: 0.18, at: 'antojos', c: G, size: 74}], sfx: [{s: 'pop', at: 'salidas', v: 0.35}, {s: 'pop', at: 'delivery', v: 0.35}, {s: 'pop', at: 'antojos', v: 0.35}]},
   {a: 'cuando se termina', b: {k: 'big', small: 'Cuando se termina,', big: 'SE TERMINÓ.', at: 'termino', c: G, size: 170}},
   // ---------- GIRO + REGLA ----------
   {a: 'entonces la tarjeta', b: {k: 'big', small: '¿La tarjeta es el enemigo?', big: 'NO.', at: 'no', c: CY, size: 260}, leak: true, sfx: [{s: 'demo3/sfx-impact.mp3', at: 'no', v: 0.5}]},

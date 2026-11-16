@@ -2,6 +2,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Img, Sequence, interpolate, staticFile, useCurrentFrame, Easing, random} from 'remotion';
 import words from './words-v3.json';
+import {makeChunks} from './captionChunks';
 import {PLAN3, Sc} from './plan3';
 
 const FPS = 30;
@@ -51,10 +52,22 @@ const BlurText: React.FC<{text: string; at: number; size: number; color?: string
   const fr = useCurrentFrame() - at;
   return (
     <span style={{fontFamily: FONT, fontWeight: weight, fontSize: size, color, letterSpacing: -1, whiteSpace: 'pre-wrap', textAlign: 'center', ...(neon ? neonText(neon) : {textShadow: '0 3px 12px #000'})}}>
-      {text.split('').map((ch, i) => {
-        const p = interpolate(fr - i * stagger, [0, 8], [0, 1], clamp);
-        return <span key={i} style={{opacity: p, filter: p < 1 ? `blur(${(1 - p) * 9}px)` : undefined, display: 'inline-block', whiteSpace: 'pre'}}>{ch}</span>;
-      })}
+      {(() => {
+        // agrupar por palabra: el renglón solo se corta entre palabras, nunca dentro de una
+        let k = 0;
+        return text.split(' ').map((word, wi) => (
+          <React.Fragment key={wi}>
+            {wi > 0 && (k++, ' ')}
+            <span style={{display: 'inline-block', whiteSpace: 'nowrap'}}>
+              {word.split('').map((ch) => {
+                const i = k++;
+                const p = interpolate(fr - i * stagger, [0, 8], [0, 1], clamp);
+                return <span key={i} style={{opacity: p, filter: p < 1 ? `blur(${(1 - p) * 9}px)` : undefined, display: 'inline-block', whiteSpace: 'pre'}}>{ch}</span>;
+              })}
+            </span>
+          </React.Fragment>
+        ));
+      })()}
     </span>
   );
 };
@@ -67,6 +80,18 @@ const Stroke: React.FC<{d: string; at: number; dur: number; color: string; width
     </svg>
   );
 };
+// subrayado a mano alzada del ancho del texto (va dentro de Center, debajo del texto)
+const Underline: React.FC<{w: number; at: number; dur: number; color: string}> = ({w, at, dur, color}) => {
+  const p = interpolate(useCurrentFrame(), [at, at + dur], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)});
+  return (
+    <svg width={w + 20} height={44} style={{overflow: 'visible', marginTop: 6, filter: glow(color), opacity: p > 0 ? 1 : 0}}>
+      <path d={`M 10 26 C ${w * 0.3} 36, ${w * 0.6} 14, ${w + 10} 22`} pathLength={1} fill="none" stroke={color} strokeWidth={8} strokeLinecap="round" strokeDasharray={`${p} 1`} />
+    </svg>
+  );
+};
+// tamaño para que el título entre en un renglón (ancho útil ~1600 px)
+const fit = (text: string, size: number, k = 0.66) => Math.min(size, Math.floor(1600 / (text.length * k)));
+const textW = (text: string, size: number, k = 0.6) => Math.min(1600, text.length * size * k);
 const box = (x: number, y: number, w: number, h: number, r = 24) =>
   `M ${x + w / 2} ${y} H ${x + w - r} Q ${x + w} ${y} ${x + w} ${y + r} V ${y + h - r} Q ${x + w} ${y + h} ${x + w - r} ${y + h} H ${x + r} Q ${x} ${y + h} ${x} ${y + h - r} V ${y + r} Q ${x} ${y} ${x + r} ${y} H ${x + w / 2}`;
 const Center: React.FC<{children: React.ReactNode; y?: number}> = ({children, y = 540}) => (
@@ -194,18 +219,20 @@ const BoardView: React.FC<Ctx> = ({sc, dur}) => {
   switch (b.k) {
     case 'title': return (
       <Dark>
-        <Center y={b.sub ? 480 : 520}><BlurText text={b.text} at={2} size={b.size ?? 110} neon={b.c} stagger={0.6} /></Center>
-        {b.sub && <Center y={640}><BlurText text={b.sub} at={10} size={52} color="#c9ced6" weight={600} stagger={0.4} /></Center>}
-        {b.line && <Stroke d="M 420 610 C 800 640, 1200 590, 1500 615 S 1880 650, 2050 570" at={10} dur={18} color={b.c ?? C.yel} width={8} />}
+        <Center y={b.sub ? 480 : 520}>
+          <BlurText text={b.text} at={2} size={fit(b.text, b.size ?? 110)} neon={b.c} stagger={0.6} />
+          {b.line && <Underline w={textW(b.text, fit(b.text, b.size ?? 110))} at={b.text.length * 0.6 + 6} dur={16} color={b.c ?? C.yel} />}
+        </Center>
+        {b.sub && <Center y={b.line ? 680 : 640}><BlurText text={b.sub} at={10} size={52} color="#c9ced6" weight={600} stagger={0.4} /></Center>}
       </Dark>);
     case 'big': {
       const t = b.at ? at(b.at, b.n) : 6;
       return (
         <Dark>
           {b.small && <Center y={360}><BlurText text={b.small} at={2} size={58} color="#c9ced6" weight={700} stagger={0.5} /></Center>}
-          {fr >= t && <Center y={540}><Pop at={t}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: b.size ?? 150, letterSpacing: -3, ...(b.c ? neonText(b.c) : {color: C.white, textShadow: '0 4px 20px #000'})}}>{b.big}</span></Pop></Center>}
+          {fr >= t && <Center y={540}><Pop at={t}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: fit(b.big, b.size ?? 150, 0.7), letterSpacing: -3, whiteSpace: 'nowrap', ...(b.c ? neonText(b.c) : {color: C.white, textShadow: '0 4px 20px #000'})}}>{b.big}</span></Pop>
+            {b.line && <Underline w={textW(b.big, fit(b.big, b.size ?? 150, 0.7), 0.62)} at={t + 8} dur={20} color={b.c ?? C.red} />}</Center>}
           {b.sub && <Center y={730}><BlurText text={b.sub} at={t + 12} size={50} color="#c9ced6" weight={600} stagger={0.4} /></Center>}
-          {b.line && <Stroke d="M 330 660 C 700 690, 1200 640, 1590 665 S 1880 700, 2050 620" at={t + 8} dur={20} color={b.c ?? C.red} width={8} />}
         </Dark>);
     }
     case 'value': {
@@ -422,15 +449,28 @@ const SceneView: React.FC<{sc: Timed; dur: number}> = ({sc, dur}) => {
 };
 
 // ---------- subtítulos: chicos, solo sobre imágenes ----------
+// Subtítulos por FRASE: se cortan en la puntuación (o a las 7 palabras), nunca entre dos escenas.
+// La frase entera aparece junta y la palabra que se está diciendo se marca en amarillo.
+type Chunk = {words: {w: string; s: number; e: number}[]; s: number; e: number};
+const CHUNKS: Chunk[] = (() => {
+  const sceneOf = (t: number) => TIMED.findIndex((x) => t >= x.start && t < x.end);
+  const raw = makeChunks(W_, sceneOf).map((c) => ({words: c, s: c[0].s, e: c[c.length - 1].e}));
+  return raw.map((c, i) => ({...c, e: Math.min(c.e + 0.6, raw[i + 1]?.s ?? c.e + 0.6)}));
+})();
 const Captions: React.FC = () => {
   const t = useCurrentFrame() / FPS;
   const sc = TIMED.find((s) => t >= s.start && t < s.end);
   if (!sc || sc.b || sc.noCap) return null;
-  const line = W_.filter((w) => w.s >= sc.start - 0.05 && w.s <= t + 0.05 && w.e >= t - 1.3).slice(-6);
-  if (!line.length) return null;
+  const ch = CHUNKS.find((c) => t >= c.s - 0.05 && t < c.e);
+  if (!ch || ch.s < sc.start - 0.01) return null;
   return (
-    <div style={{position: 'absolute', bottom: 64, left: 200, right: 200, textAlign: 'center', fontFamily: FONT, fontWeight: 700, fontSize: 42, color: C.white, textShadow: '0 2px 8px #000, 0 0 3px #000, 0 0 3px #000'}}>
-      {line.map((w) => w.w).join(' ')}
+    <div style={{position: 'absolute', bottom: 56, left: 160, right: 160, display: 'flex', justifyContent: 'center'}}>
+      <div style={{background: 'rgba(0,0,0,0.55)', borderRadius: 14, padding: '8px 22px', fontFamily: FONT, fontWeight: 700, fontSize: 44, lineHeight: 1.25, textAlign: 'center', color: C.white, textShadow: '0 2px 6px #000'}}>
+        {ch.words.map((w, i) => {
+          const on = t >= w.s - 0.03 && t < (ch.words[i + 1]?.s ?? ch.e);
+          return <span key={i} style={{color: on ? C.yel : C.white}}>{(i ? ' ' : '') + w.w}</span>;
+        })}
+      </div>
     </div>
   );
 };
