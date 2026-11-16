@@ -1,24 +1,32 @@
-# Estado del canal — dónde quedamos (actualizado 16/11/2026)
+# Estado del canal — dónde quedamos (actualizado 16/11/2026, tarde)
 
 ## Videos
 | N.º | Título | Estado | Archivos clave |
 |---|---|---|---|
 | 1 | Por qué la gente que parece pobre tiene más dinero que tú | ✅ **Publicado** | guion `produccion/guiones/01-parece-pobre.md` · plan `produccion/remotion/src/plan.ts` + `FullVideo.tsx` · miniaturas `canal/assets/video1-parece-pobre-A-iceberg.jpg` (principal) y `-B-comparacion.jpg` · subida `contenido/01-parece-pobre-subida.md` |
-| 2 | Tu vida en cada nivel de sueldo (y la trampa de cada uno) | 🔄 **Renderizando** (8:47) | guion `produccion/guiones/02-cada-nivel-de-sueldo.md` · plan `produccion/remotion/src/plan2.ts` + `Video2.tsx` · escenas `public/escenas2/` · miniatura `canal/assets/video2-niveles-sueldo-miniatura.jpg` ("SUBES… Y CAES") · subida `contenido/02-niveles-sueldo-subida.md` |
-| 3 | Por qué pagar con tarjeta te hace gastar más (propuesto) | 💡 Idea | miniatura vieja `canal/assets/video1-miniatura.png` ("NO DUELE") |
+| 2 | Tu vida en cada nivel de sueldo (y la trampa de cada uno) | ✅ **Listo para subir** (8:59, `out/video2-YOUTUBE.mp4` enviado al dueño; capítulos en la ficha) | guion `produccion/guiones/02-cada-nivel-de-sueldo.md` · plan `produccion/remotion/src/plan2.ts` + `Video2.tsx` · escenas `public/escenas2/` · miniatura `canal/assets/video2-niveles-sueldo-miniatura.jpg` ("SUBES… Y CAES") · subida `contenido/02-niveles-sueldo-subida.md` |
+| 3 | Por qué gastas más cuando pagas con tarjeta | 🔄 **Renderizando** (4:52, estilo nuevo neón/líneas brillantes) | guion `produccion/guiones/03-tarjeta.md` · plan `src/plan3.ts` + `src/Video3.tsx` · escenas `public/escenas3/` · voz `public/v3/voz-video3.mp3` · miniaturas `canal/assets/video3-tarjeta-1/2/3-*.jpg` · subida `contenido/03-tarjeta-subida.md` |
 
 ## En marcha ahora
-- **Render del video 2** (proceso independiente, sigue aunque se limpie el chat). Iba en 10.947/16.176 cuadros (~1 h 15 min restante).
-  - Ver progreso: `tail -c 120 /tmp/claude-0/-home-user-cerebro-youtube/7da7cb3a-58e0-52fd-a95a-86b2766ffad0/scratchpad/render-v2.log` (al final dice `DONE`).
-  - Script: `.../scratchpad/render-v2.sh` (render a 6 Mbps + `loudnorm` → `produccion/remotion/out/video2-YOUTUBE.mp4`).
-- **Cuando termine:** 1) verificar duración (~9:00) y tamaño (<500 MB); 2) mandar `out/video2-YOUTUBE.mp4` al dueño; 3) completar capítulos en `contenido/02-niveles-sueldo-subida.md` con `src/lines-v2.json` (E01 apertura, E10 $500, E24 $1.000, E35 $2.500, E46 $5.000, E61 $10.000, E71 giro, E78 cierre); 4) copia liviana al repo (<50 MB, ~1,2 Mbps) y borrar `out/raw-v2.mp4`.
+- **Render del video 3** (proceso independiente en el servidor de la nube; no depende de la compu del dueño).
+  - Progreso: `tail -c 120 /tmp/claude-0/-home-user-cerebro-youtube/2ba71c2c-c89a-4b53-b96c-afa40003b78c/scratchpad/render-v3.log` (al final dice `DONE`).
+  - **Si el servidor se reinició y el render se perdió**, relanzarlo desde `produccion/remotion`:
+    `npx remotion render src/index.ts Video3 out/raw-v3.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --gl=swangle --concurrency=4 --video-bitrate=6M --x264-preset=medium --overwrite`
+    y después `ffmpeg -i out/raw-v3.mp4 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k -movflags +faststart out/video3-YOUTUBE.mp4` (~2 h 45 min en total).
+- **Cuando termine:** verificar duración (~4:52) y tamaño, mandarlo al dueño, copia liviana al repo y borrar `out/raw-v3.mp4`.
+
+## Estilo nuevo (desde el video 3)
+- Estilo Isaac: neón sobre negro + dibujo de líneas brillantes (ámbar normal · rojo problema · verde solución). Análisis en `conocimiento/formatos-visuales.md`.
+- **Sin clips de IA** (el dueño los vio caros): movimiento por código (encendido, parpadeo, barrido de luz, zoom).
+- Texto siempre nítido: letra clara + borde del color + fondo oscuro detrás de las etiquetas.
+- Miniaturas: vender el resultado (número grande, tarjeta de app, cara en shock). Checklist en `conocimiento/titulos-miniaturas.md`.
 
 ## Decisiones pendientes del dueño
 - **Subtítulos:** propuesta = siempre visibles pero más chicos/discretos + texto grande solo en palabras clave (Isaac dice que tenerlos siempre cansa; pero en celular se mira sin sonido).
 - Tema del video 3 (propuesto: tarjeta de crédito).
 
 ## Próximos pasos
-1. Entregar video 2 (ver arriba) y recordarle al dueño: después de publicarlo, editar el video 1 → tarjeta + pantalla final hacia el video 2.
+1. Entregar video 3 y recordarle al dueño: publicar el 2, después editar el video 1 (y el 2 al publicar el 3) → tarjeta + pantalla final hacia el siguiente.
 2. Video 3 aplicando lo nuevo de Isaac (`conocimiento/guiones-retencion.md` y `conocimiento/edicion.md`): problema profundo, viaje del héroe con Tú (Marcos = espejo, mascota = mentor), **frasco de Tú que se llena video a video** (historia que une la serie), "pero/por eso", generar SFX **riser** e **impact** en ElevenLabs, destellos de luz en transiciones.
 3. Shorts diarios a partir de los videos largos.
 4. Producto de bajo precio + planilla gratis (ver `canal/estrategia-monetizacion.md`).
