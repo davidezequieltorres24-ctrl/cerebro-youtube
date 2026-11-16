@@ -40,3 +40,11 @@
 7. Reflejos de luz: capa nueva, pincel con color, modo **Superponer (Overlay)**.
 8. Retoque final de color en Lightroom (celular).
 9. **Testear** en thumbsup.tv con el título, simulando la home de YouTube.
+
+## Proceso real usado (video 1, v2)
+1. 3 conceptos distintos sin texto (APIMart, Nano Banana 2, refs: hoja de personajes + miniatura con mejor score). ~US$0,04.
+2. Descartar los confusos (más de 3 elementos o personajes donde no van).
+3. **El texto lo pongo yo** con la fuente de marca (`canal/assets/fuentes/ArchivoBlack.ttf`), trazo negro grueso + sombra. La IA solo hace la imagen.
+4. **La miniatura NO repite el título: lo completa** (título "parece pobre" → miniatura "LO QUE NO VES" / "$0 vs $$$").
+5. El texto nunca tapa al personaje. Verificar a 320×180 (tamaño celular).
+6. Probar en la vista previa de vidIQ (equivale a thumbsup.tv) y subir 2 versiones a "Probar y comparar" de YouTube.
