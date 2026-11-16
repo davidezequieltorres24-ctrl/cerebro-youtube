@@ -10,7 +10,11 @@
 - Solo 2 elementos (chico + ojos), contraste naranja cálido vs. verde azulado oscuro, fondo oscurecido detrás del texto, viñeta y grano.
 - Dibujo IA: `produccion/remotion/public/uys-2/mini-d.png` (alternativa: `mini-c.png`, mira a cámara). Texto y flechas por código.
 - Reserva: v1 (`02-amazonas-48h-miniatura-v1.jpg`, con el mono y la linterna; más cargada).
-- Pendiente: 2 miniaturas más para "Probar y comparar".
+**Probar y comparar (subir las 3):**
+1. `assets/02-amazonas-48h-miniatura.jpg` — "48 HORAS" + TÚ aterrado mirando unos ojos "¿JAGUAR?" (curiosidad + emoción). Principal.
+2. `assets/02-amazonas-48h-miniatura-2-hora1-hora48.jpg` — "HORA 1 → HORA 48": TÚ feliz con selfie de día vs. TÚ destruido bajo la lluvia (comparación + número).
+3. `assets/02-amazonas-48h-miniatura-3-hormiga.jpg` — "24 H DE DOLOR": hormiga bala gigante + TÚ llorando con la mano hinchada (objeto raro + shock).
+- Código para rehacerlas: `produccion/remotion/miniaturas_uys2.py` (dibujos `public/uys-2/mini-d/e/f.png`; el chico de e/f usa mini-d como referencia para que sea el mismo).
 
 **Título:** ¿Y si estuvieras 48 horas perdido en la selva amazónica?
 

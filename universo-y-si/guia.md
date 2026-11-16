@@ -82,6 +82,7 @@ Formato: cada escena con título + tiempo, línea **Visual** (qué se anima) y e
 - Sonido: música según el clima de la escena + canción recurrente + efectos (mar, lluvia, trueno, alarma, golpes, flash). Master −14 LUFS.
 - Miniatura: **estilo distinto al video**: cartoon muy saturado, caras exageradas, etiquetas **"TÚ" / "TU CRUSH" con flechas verdes**, texto corto amarillo arriba (ej. "30 DÍAS A LA DERIVA"); a veces "DÍA 1 / DÍA 30".
 - **Reglas de miniatura aprendidas (video 2):** máx. 2–3 elementos (sacar todo lo que compita) · cara GRANDE en un tercio vertical con los ojos sobre la línea superior · la amenaza en el otro tercio · **la mirada del protagonista apunta a la amenaza** (lleva la vista) · texto en el espacio vacío, sin tapar pelo ni cara, con la palabra clave en amarillo · pedir a la IA la composición exacta en porcentajes ("face centered at 28% from the left…") y verificar con la grilla de tercios.
+- **3 miniaturas con ángulos distintos** para "Probar y comparar": (1) curiosidad/amenaza, (2) comparación HORA 1 vs HORA final, (3) objeto raro/shock. Para que el protagonista sea el mismo en las 3, subir la primera como referencia (`REFS_URLS`).
 - **Flechas:** siempre con `produccion/remotion/flechas.py` (`flecha(img, inicio, control, punta, color)`): trazo grueso, una sola curva, punta grande, contorno negro. Arrancan separadas de la etiqueta y terminan en el BORDE del objeto (nunca en el vacío ni encima de la cara).
 - Descripción: párrafo gancho + capítulos con nombres intrigantes + la pregunta + disclaimer en chiste + solo 3 hashtags.
 
@@ -96,7 +97,7 @@ Formato: cada escena con título + tiempo, línea **Visual** (qué se anima) y e
 | N.º | Título | Estado |
 |---|---|---|
 | 1 | ¿Y si quedaras a la deriva en un crucero vacío con tu crush? (11:45) | Terminado (otro chat). Personajes: Tú (16, fotógrafo), Lucía Ferrer, Ramón (delfín) |
-| 2 | ¿Y si estuvieras 48 horas perdido en la selva amazónica? (~8:50) | Guion en borrador + miniatura · `videos/02-48-horas-amazonas.md` |
+| 2 | ¿Y si estuvieras 48 horas perdido en la selva amazónica? (~8:50) | Guion en borrador + 3 miniaturas · `videos/02-48-horas-amazonas.md` |
 
 ## Próximos pasos (del doc)
 1. Subir perfil, banner, marca de agua y descripción.
