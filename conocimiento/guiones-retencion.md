@@ -24,3 +24,10 @@
 ## Visuales
 - **Cada línea del guion tiene su imagen**: si el narrador dice "recibo", aparece un recibo; "pileta" → pileta + cronómetro.
 - Pueden ser simples (figuras planas sobre fondo azul oscuro). Lo clave: lo que se dice y lo que se ve coinciden al mismo tiempo.
+
+## Motor de retención: PROBLEMA → SOLUCIÓN → PROBLEMA (pedido del dueño, desde el video 2)
+- Cada bloque: **{P} problema** (escena que duele) → **agravante** (estudio) → **{S} solución** concreta con números, aplicable hoy → **{G} gancho** que abre el siguiente problema. Nunca cerrar un bloque sin abrir otro.
+- Promesa abierta al inicio ("al final te doy la regla de una línea…") y pagarla al final.
+- Re-enganche cada 60–90 s ("quédate, porque esta es la que atrapa a…").
+- Frases cortas, preguntas directas, una mini encuesta ("elige una mentalmente… ¿ya?").
+- En pantalla: sello rojo "PROBLEMA" / verde "SOLUCIÓN" al entrar en cada parte.
