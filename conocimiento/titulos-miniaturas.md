@@ -65,3 +65,4 @@
 - Pocos elementos, fondo oscuro con grilla sutil, mucho contraste. Los números y la interfaz se hacen POR CÓDIGO (PIL), nunca con IA (deforma el texto).
 - La miniatura no tiene que mostrar el contenido: tiene que dar un mensaje claro que genere el clic. La retención la gana el video.
 - Script reutilizable: tarjeta de interfaz + número + flecha curva + capa de dibujo con fusión "screen" (el negro desaparece).
+- **Checklist v2 (lo que separó "se acerca" de "funciona"):** números que llenan el cuadro (no medianos) · personaje GRANDE con emoción exagerada (shock, manos en la cabeza) · 1–2 tarjetas de app como "prueba" · grilla + viñeta + grano + nitidez · nada en la esquina inferior derecha · probar en feed de celular y corregir lo que se pise.
