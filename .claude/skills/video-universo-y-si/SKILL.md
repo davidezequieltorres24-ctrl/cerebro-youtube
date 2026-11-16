@@ -48,7 +48,7 @@ Todo lo del canal vive en `universo-y-si/`: guiones en `universo-y-si/guiones/`,
 1. **Hoja de personajes del video** (1 imagen, APIMart): Tú + crush + secundario, de frente y perfil, en el estilo 2D plano. Subirla como referencia (`POST /v1/uploads/images?retention_days=3`) y usarla en TODOS los planos (consistencia).
 2. Lista `planos.json` con `[{"id":"p01","prompt":"…"}]`: **~60–90 planos** (cambio cada 5–10 s), sacados de las líneas `Visual:`. Variar plano general / medio / primer plano de caras con expresión.
 3. Estilo (`STYLE_OVERRIDE`): *"16:9 flat 2D cartoon illustration, thick black outlines, flat solid colors, simple rounded characters, soft dark vignette, clean background. Characters must match the reference sheet exactly. No text, no letters, no watermark. Scene: "*
-4. `OUT_DIR=public/uys-N REFS_URLS=<url hoja> python3 gen_apimart.py planos.json` (~US$0,014–0,04 c/u → ~US$1–3 por video). Pasar a JPG ~2300 px. Hoja de contactos → regenerar solo los que fallen (texto, personaje distinto, manos raras).
+4. `OUT_DIR=public/uys-N REFS_URLS=<url hoja> python3 gen_apimart.py planos.json` (~USD 0,014–0,04 c/u → ~USD 1–3 por video). Pasar a JPG ~2300 px. Hoja de contactos → regenerar solo los que fallen (texto, personaje distinto, manos raras).
 5. Para parpadeos y gestos: pedir 2–3 variantes de la misma cara (ojos cerrados, boca abierta) y alternarlas por código.
 
 ## 5. Montaje en Remotion (`produccion/remotion/`)

@@ -50,7 +50,7 @@ Seguir `conocimiento/guiones-retencion.md`. La estructura que funcionó en el vi
 ## 4. Escenas (imágenes IA)
 1. Lista `escenasN.json` con `[{"id":"i03","prompt":"…"}]`: **una imagen por idea** (no hace falta una por frase). Las escenas de texto, números y gráficos se hacen por código, no con IA.
 2. Prompt de estilo (variable `STYLE_OVERRIDE`): *"16:9 image. Style: glowing NEON LINE ART on pure black, THICK bold glowing neon outlines (like a neon sign), no fill colors, no gradients, simple cartoon. Character must match the reference character sheet (TÚ = young man, messy brown hair, hoodie). No text, no letters, no numbers, no logos, no watermark. Scene: "*
-3. Generar: `OUT_DIR=public/escenasN REFS_N=1 STYLE_OVERRIDE="…" python3 gen_apimart.py escenasN.json` (~US$0,014–0,04 por imagen). Las URL de `refs.json` vencen a los 3 días: si falla, volver a subir la hoja (`POST /v1/uploads/images?retention_days=3`).
+3. Generar: `OUT_DIR=public/escenasN REFS_N=1 STYLE_OVERRIDE="…" python3 gen_apimart.py escenasN.json` (~USD 0,014–0,04 por imagen). Las URL de `refs.json` vencen a los 3 días: si falla, volver a subir la hoja (`POST /v1/uploads/images?retention_days=3`).
 4. Pasar a JPG de ~2300 px. Armar una **hoja de contactos** y revisarla: texto en inglés, personaje distinto o manos raras → regenerar esa sola.
 5. Sin clips de video IA (el dueño los vio caros): el movimiento se hace por código.
 
@@ -62,7 +62,7 @@ Seguir `conocimiento/guiones-retencion.md`. La estructura que funcionó en el vi
    - Sonido: `sfx` con `at` (palabra) → whoosh en cada imagen, **riser** antes de una revelación, **impact** en la palabra clave, pop en listas.
 3. **Estadísticas y citas** (modelo aprobado: `src/Muestra.tsx`, comp. `Muestra`):
    - ⛔ **No usar animación de libro** (libro 3D, imagen de libro, hoja que vuela): al dueño le pareció forzada. Si se cita un libro, va como dato con el mismo estilo de la estadística: chip "LIBRO · Autor año" + la idea en texto grande + fuente abajo en gris.
-   - **Estadística**: 100 % código (US$0). Chip "ESTUDIO · institución año", pregunta, barras que crecen con contador, línea guía al nivel menor y número gigante del resultado ("×2,1") con riser + impact. **Fuente abajo en gris** (autor, revista, año y qué se midió).
+   - **Estadística**: 100 % código (USD 0). Chip "ESTUDIO · institución año", pregunta, barras que crecen con contador, línea guía al nivel menor y número gigante del resultado ("×2,1") con riser + impact. **Fuente abajo en gris** (autor, revista, año y qué se midió).
    - Cada cifra verificada contra la fuente antes de animarla (redondear con "~" si las fuentes difieren).
 4. Reglas que ya se corrigieron (no repetirlas):
    - Textos animados letra por letra **agrupados por palabra** (nunca "CUERP/O"). Títulos ajustados a 1 renglón, con el subrayado debajo del texto y del mismo ancho.
@@ -82,7 +82,7 @@ Seguir `conocimiento/guiones-retencion.md`. La estructura que funcionó en el vi
 
 ## 7. Miniaturas y títulos (3 + 3 para "Probar y comparar")
 Leer `conocimiento/titulos-miniaturas.md`. Hacer **3 miniaturas con ángulos distintos**:
-1. **Comparación + número + emoción** (ej. "$87 → $174", Tú rojo vs Tú verde).
+1. **Comparación + número + emoción** (ej. "87 → 174 dólares", Tú rojo vs Tú verde).
 2. **Shock + interfaz + header** (ej. "NO LO SENTISTE" + notificaciones del banco + cara agarrándose la cabeza).
 3. **Mascota cerebro + objeto raro + interfaz** (ej. "LA TARJETA TE CIEGA", "TE" en el color de resaltado).
 - La IA hace **solo el dibujo**, ya compuesto para el texto ("TOP THIRD completely EMPTY black", caras en los tercios). Texto, números, tarjetas de app y flechas, por código con la librería de `miniaturas_v3.py` (`bg`, `glowtext`, `fit`, `app_card`, `curve_arrow`, `screen`, `finish`).
@@ -99,5 +99,5 @@ Copiar el formato de `contenido/03-tarjeta-subida.md`: 3 títulos, 3 miniaturas,
 - Anotar el gasto: ElevenLabs (`account_get_usage`) y APIMart (`curl -sS https://api.apimart.ai/v1/user/balance`).
 
 ## Costos y tiempos de referencia (video 3, 4:53)
-- Imágenes: 18 escenas + 2–3 de miniatura ≈ US$0,50. Voz: ~8.700 créditos de ElevenLabs.
+- Imágenes: 18 escenas + 2–3 de miniatura ≈ USD 0,50. Voz: ~8.700 créditos de ElevenLabs.
 - Trabajo: guion + voz + escenas ≈ 2 h · render ≈ 1–3 h (3 partes) · miniaturas ≈ 30 min.
