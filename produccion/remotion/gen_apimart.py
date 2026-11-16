@@ -5,7 +5,7 @@ escenas.json = [{"id": "e13", "prompt": "..."}, ...]
 import json, sys, time, os, urllib.request
 
 API = "https://api.apimart.ai/v1"
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public", "escenas")
+OUT = os.environ.get("OUT_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "public", "escenas"))
 REFS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "refs.json")))
 STYLE = ("16:9 landscape scene in EXACTLY the same warm hand-drawn 2D cartoon style as the reference images "
          "(clean dark outlines, soft flat colors with gentle shading, detailed backgrounds). "

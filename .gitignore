@@ -7,3 +7,5 @@ produccion/remotion/refs.json
 produccion/remotion/out/raw-*.mp4
 produccion/remotion/out/*-COMPLETO.mp4
 produccion/remotion/out/*-YOUTUBE.mp4
+produccion/remotion/out/video*-YOUTUBE.mp4
+produccion/remotion/public/escenas2/*.png
