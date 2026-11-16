@@ -9,7 +9,7 @@
 
 ## En marcha ahora
 - **Re-render del video 3** con correcciones del dueño (16/11): títulos subrayados cortaban palabras ("CUERP/O", "MAR/CA") → ahora se corta solo entre palabras, tamaño que entra en 1 renglón y subrayado del ancho del texto; subtítulos ahora por frase completa (`src/captionChunks.ts`), palabra actual en amarillo; imagen de la lista más larga.
-  - Script: `bash /tmp/claude-0/-home-user-cerebro-youtube/7da7cb3a-58e0-52fd-a95a-86b2766ffad0/scratchpad/render-v3.sh` (render + volumen + copia liviana; log `render-v3.log` en el mismo lugar, termina en `DONE`).
+  - Se renderiza en 3 partes (cada comando en segundo plano corta a las 2 h): `part.sh 1 0 2927`, `part.sh 2 2928 5855`, `part.sh 3 5856 8782` y al final `join.sh` (audio aparte + unir + volumen + copia liviana). Scripts en `/tmp/claude-0/-home-user-cerebro-youtube/7da7cb3a-58e0-52fd-a95a-86b2766ffad0/scratchpad/`. Si se pierden, se rehacen así: `npx remotion render … --frames=A-B --muted` por parte; audio con `--codec=wav`; unir con ffmpeg concat + loudnorm.
   - Cuando termine: mandar `out/video3-YOUTUBE.mp4` al dueño y commitear `out/video3-repo.mp4`.
 
 ## Estilo nuevo (desde el video 3)
