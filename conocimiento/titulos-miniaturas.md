@@ -66,3 +66,12 @@
 - La miniatura no tiene que mostrar el contenido: tiene que dar un mensaje claro que genere el clic. La retención la gana el video.
 - Script reutilizable: tarjeta de interfaz + número + flecha curva + capa de dibujo con fusión "screen" (el negro desaparece).
 - **Checklist v2 (lo que separó "se acerca" de "funciona"):** números que llenan el cuadro (no medianos) · personaje GRANDE con emoción exagerada (shock, manos en la cabeza) · 1–2 tarjetas de app como "prueba" · grilla + viñeta + grano + nitidez · nada en la esquina inferior derecha · probar en feed de celular y corregir lo que se pise.
+
+## Probar y comparar (desde el video 3, 16/11/2026)
+- Subir **3 miniaturas con ÁNGULOS DISTINTOS**, no 3 versiones de la misma idea. Las del video 3:
+  1. **Comparación + número + emoción**: "$87 → $174", Tú rojo sufriendo con efectivo vs Tú verde feliz con tarjeta + tarjeta de app "Pago aprobado". Imagen IA con la composición pensada: caras en los tercios, tercio de arriba vacío para los números, centro vacío para la prueba.
+  2. **Shock + interfaz + header**: "NO LO SENTISTE" + 3 notificaciones "Pago aprobado" apiladas + Tú agarrándose la cabeza (2/3 derecha).
+  3. **Mascota + objeto raro + interfaz**: "LA TARJETA TE CIEGA" ("TE" en el color de resaltado) + cerebro con la tarjeta de venda + flecha desde el pago hasta la venda.
+- **3 títulos** también: el principal (habla de "tú") + uno con número ("hasta el doble", fiel al estudio: nunca exagerar el dato) + uno de curiosidad ("lo que tu cerebro deja de ver").
+- Pedir a la IA la imagen **ya compuesta para el texto**: "the TOP THIRD completely EMPTY black", "heads on the left/right third", "middle column empty". Así el texto no tapa caras.
+- Tarjetas de app: alto ≥ 110 px para que el monto no se salga; máximo 3 apiladas.

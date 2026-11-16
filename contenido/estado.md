@@ -21,6 +21,11 @@
 - **Subtítulos:** propuesta = siempre visibles pero más chicos/discretos + texto grande solo en palabras clave (Isaac dice que tenerlos siempre cansa; pero en celular se mira sin sonido).
 - Tema del video 3 (propuesto: tarjeta de crédito).
 
+## Herramientas nuevas (16/11)
+- Skill **`video-tu-mente-gasta`**: el proceso completo de un video (tema → guion → voz → escenas → montaje → render por partes → 3 miniaturas + 3 títulos → ficha).
+- Scripts: `produccion/remotion/scripts/render-parte.sh`, `unir.sh`, `tiempos_whisper.py`. Subtítulos por frase: `src/captionChunks.ts`.
+- Pendiente: el dueño pasa la info de su otro canal **UniversoYSI** → crear su skill propio.
+
 ## Próximos pasos
 1. Recordarle al dueño: publicar el 2, después editar el video 1 (y el 2 al publicar el 3) → tarjeta + pantalla final hacia el siguiente.
 2. Video 3 aplicando lo nuevo de Isaac (`conocimiento/guiones-retencion.md` y `conocimiento/edicion.md`): problema profundo, viaje del héroe con Tú (Marcos = espejo, mascota = mentor), **frasco de Tú que se llena video a video** (historia que une la serie), "pero/por eso", generar SFX **riser** e **impact** en ElevenLabs, destellos de luz en transiciones.

@@ -23,6 +23,14 @@
 - **Sonido = la mitad del video.** 3 tipos base: **whoosh, riser (subida de tensión) e impact (golpe)**. Diseñarlo con la voz y la música silenciadas; después bajar el volumen para que no moleste.
 - Corrección de color al final.
 
+## Textos y subtítulos (errores corregidos en el video 3, 16/11/2026)
+- **Nunca cortar una palabra en dos renglones** ("CUERP/O", "MAR/CA"): al animar letra por letra, agrupar cada palabra en un bloque que no se parta (`BlurText` en `Video3.tsx`).
+- Título largo → **achicar para que entre en 1 renglón** (ancho útil ~1.600 px). El subrayado va **debajo del texto y del mismo ancho**, nunca una línea fija que se salga de pantalla.
+- **Subtítulos por FRASE completa**, no ventana de palabras que se corren: cortar en la puntuación; frases cortas ("Ahora,") se juntan con la siguiente; frases largas (>50 letras) en mitades parejas, antes de "y / que / porque / pero / con / para"; nunca separar nombres propios ni listas de números; nunca cruzar de una escena a otra. Palabra que se dice en amarillo + fondo oscuro suave. Código: `produccion/remotion/src/captionChunks.ts`.
+- Subtítulos solo en escenas con imagen; en escenas de texto grande no (ya está escrito).
+- Cada imagen debe durar **≥ 2 s** (una de 0,9 s se ve como un parpadeo): si la frase es corta, mover el ancla de la escena siguiente.
+- **Revisar antes de entregar:** hoja de contactos con 2 cuadros por escena (inicio y final) + cuadros sueltos (`npx remotion still … --frame=N --scale=0.5`) de cada título y subtítulo largo.
+
 ## Mentalidad
 - **Probar algo nuevo en cada video** (los canales que repiten el mismo video 10 veces se estancan).
 - Aprender una técnica nueva por video: la primera vez cuesta 3 h, después minutos.

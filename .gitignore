@@ -15,3 +15,6 @@ produccion/remotion/out/v3-part*.mp4
 produccion/remotion/out/v3-audio.wav
 produccion/remotion/out/v3-list.txt
 produccion/remotion/out/raw-*.mp4
+produccion/remotion/out/*-part*.mp4
+produccion/remotion/out/*-audio.wav
+produccion/remotion/out/*-list.txt

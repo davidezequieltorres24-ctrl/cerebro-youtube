@@ -48,7 +48,7 @@
 **Tiempos reales en este servidor (4 núcleos):** ~1.000 cuadros cada 8–10 min → 7 min de video ≈ 1 h 30 – 2 h de render. Un video de 12 min ≈ 3 h.
 1. **Renderizar directo en la calidad final** (sin recodificar después): `npx remotion render ... --crf=18 --x264-preset=medium --audio-codec=aac` y aplicar `loudnorm` solo al audio (`-c:v copy`). Así sale un archivo de ~200–400 MB y no 700 MB.
 2. **Límites de tamaño:** para mandar el archivo por el chat: **máx. 500 MB**. GitHub: **máx. 100 MB por archivo** → al repo va solo una copia liviana (~1,6 Mbps), la versión para YouTube se manda por el chat.
-3. **Lanzar el render como proceso independiente** (`nohup setsid script.sh &`), nunca como tarea en segundo plano con límite de 2 h. Vigilar con un monitor que avise el progreso.
+3. ~~Lanzar el render con `nohup setsid`~~ → **se muere solo** (16/11: murió al 10%). **Renderizar en 3 partes** (cada una < 2 h) como tarea en segundo plano, audio aparte en WAV y unir: `scripts/render-parte.sh` + `scripts/unir.sh` (ver abajo).
 4. **Nada de `filter: blur()` en transiciones**: duplica el tiempo de render. Barridos con movimiento y opacidad solamente. El 3D (Three.js) solo en escenas cortas.
 5. **Imágenes en JPG de ~2300 px** (no PNG de 2.7K) para que cada cuadro cargue rápido.
 6. **Empezar el render apenas estén voz + escenas**, y escribir el guion del video siguiente mientras renderiza (render = tiempo muerto aprovechable). No correr dos renders a la vez.
@@ -75,3 +75,12 @@
   - Truco: el mismo clip **al revés** (`-vf reverse`) sirve para "rebobinar".
 - ElevenLabs cobra ~2.100 créditos (Kling 2.5 Turbo) o ~7.300 (Seedance) por clip → NO usarlo para clips.
 - Texto en neón: **letra clara + borde fino del color + halo corto**. El brillo fuerte (drop-shadow doble) solo en líneas y cajas; sobre letras satura y no se lee.
+
+## ✅ Render por partes (desde 16/11/2026, video 3)
+- Un comando en segundo plano se corta a las 2 h y un proceso suelto (`nohup setsid`) muere → **dividir el video en 3 partes**.
+- Total de cuadros: `npx remotion compositions src/index.ts` → partes iguales (ej. 8.783 → 0–2927 · 2928–5855 · 5856–8782).
+- `bash scripts/render-parte.sh Video3 1 0 2927` (sin audio, `--muted`) → al terminar, la parte 2, después la 3.
+- `bash scripts/unir.sh Video3 video3` → audio en WAV (rápido) + concat sin recodificar + `loudnorm -14` + copia liviana `out/video3-repo.mp4`.
+- Velocidad real: ~25–60 min por parte de 1:40 de video (4 CPU). Revisar 2 cuadros en cada unión antes de entregar.
+- Tiempos por palabra: `python3 scripts/tiempos_whisper.py voz.wav src/words-vN.json`.
+- Voz: en el texto para TTS escribir los números **en letras** ("ochenta y siete dólares") y pausas con "…"; en pantalla van en cifras.
