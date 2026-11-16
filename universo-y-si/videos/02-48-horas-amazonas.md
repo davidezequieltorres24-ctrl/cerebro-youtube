@@ -10,7 +10,9 @@
 - Solo 2 elementos (chico + ojos), contraste naranja cálido vs. verde azulado oscuro, fondo oscurecido detrás del texto, viñeta y grano.
 - Dibujo IA: `produccion/remotion/public/uys-2/mini-d.png` (alternativa: `mini-c.png`, mira a cámara). Texto y flechas por código.
 - Reserva: v1 (`02-amazonas-48h-miniatura-v1.jpg`, con el mono y la linterna; más cargada).
-**Portadas REALISTAS estilo póster (16/11, pedido del dueño; refs: "Nothing Survives" + póster "Claws"):**
+**Portadas en BLANCO Y NEGRO (versión elegida por el dueño, 16/11):** `assets/02-amazonas-48h-bn-a-perdido.jpg` y `assets/02-amazonas-48h-bn-b-sobrevive.jpg` — misma imagen realista en B/N con más contraste y grano; el texto rojo es el único color.
+
+**Portadas REALISTAS a color estilo póster (16/11, pedido del dueño; refs: "Nothing Survives" + póster "Claws"):**
 - `assets/02-amazonas-48h-real-a-perdido.jpg` — "48 HORAS" (rojo) / "PERDIDO" (blanco) + jaguar gigante en la niebla y TÚ corriendo con la linterna.
 - `assets/02-amazonas-48h-real-b-sobrevive.jpg` — "SOBREVIVE" (blanco) / "48 HORAS" (rojo) + cara enorme del jaguar con ojos que brillan y TÚ de espaldas con la linterna.
 - Fuente Anton (`canal/assets/fuentes/Anton-Regular.ttf`, licencia OFL). Dibujos: `produccion/remotion/public/uys-2/real/real-a/b.png`.
