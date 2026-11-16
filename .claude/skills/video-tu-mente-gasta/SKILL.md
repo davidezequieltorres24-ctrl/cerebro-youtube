@@ -60,8 +60,8 @@ Seguir `conocimiento/guiones-retencion.md`. La estructura que funcionó en el vi
    - Imagen: `img` + `z` (zoom), `fx/fy` (foco), `tint` (`red`/`green`), `labels` que aparecen en la palabra `at`, `stamp` `'P'`/`'S'` (sello PROBLEMA/SOLUCIÓN), `leak` (destello de transición), `beats` (latidos).
    - Texto: `b:{k:'title'|'big'|'value'|'year'|'map'|'bills'|'brain'|'rule'|…}` → palabra gigante, número que cuenta, año, mapa de 3 partes, billetes contados, cerebro, regla final.
    - Sonido: `sfx` con `at` (palabra) → whoosh en cada imagen, **riser** antes de una revelación, **impact** en la palabra clave, pop en listas.
-3. **Citas de libros y estadísticas** (modelo: `src/Muestra.tsx`, comp. `Muestra`):
-   - **Libro** (100 % código, US$0): libro de neón en 3D que se enciende titilando y flota, con título y autores en la tapa → la tapa se abre → pasan las hojas → sale luz y suben partículas → una hoja vuela hacia la cámara y se convierte en la tarjeta "LA IDEA DEL LIBRO" (idea **parafraseada** en serif itálica; sin comillas si no es textual) → **resaltador amarillo** sobre las palabras clave → remate en rojo. Sonidos: bip al encender, whoosh al abrir y en cada hoja, pop y impact en el remate. Cambiar solo título, autores, año e idea.
+3. **Estadísticas y citas** (modelo aprobado: `src/Muestra.tsx`, comp. `Muestra`):
+   - ⛔ **No usar animación de libro** (libro 3D, imagen de libro, hoja que vuela): al dueño le pareció forzada. Si se cita un libro, va como dato con el mismo estilo de la estadística: chip "LIBRO · Autor año" + la idea en texto grande + fuente abajo en gris.
    - **Estadística**: 100 % código (US$0). Chip "ESTUDIO · institución año", pregunta, barras que crecen con contador, línea guía al nivel menor y número gigante del resultado ("×2,1") con riser + impact. **Fuente abajo en gris** (autor, revista, año y qué se midió).
    - Cada cifra verificada contra la fuente antes de animarla (redondear con "~" si las fuentes difieren).
 4. Reglas que ya se corrigieron (no repetirlas):

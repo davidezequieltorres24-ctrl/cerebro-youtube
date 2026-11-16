@@ -31,6 +31,10 @@
 - Cada imagen debe durar **≥ 2 s** (una de 0,9 s se ve como un parpadeo): si la frase es corta, mover el ancla de la escena siguiente.
 - **Revisar antes de entregar:** hoja de contactos con 2 cuadros por escena (inicio y final) + cuadros sueltos (`npx remotion still … --frame=N --scale=0.5`) de cada título y subtítulo largo.
 
+## Datos en pantalla (decisión del dueño, 16/11/2026)
+- ✅ **Estadística animada** (`src/Muestra.tsx`): chip del estudio + pregunta + barras que crecen con contador + línea guía + número gigante ("×2,1") + fuente en gris. Le gustó.
+- ❌ **Libro animado** (imagen de libro o libro 3D que se abre y una hoja que vuela): "se ve muy forzado". Las citas van como dato simple, sin libro.
+
 ## Mentalidad
 - **Probar algo nuevo en cada video** (los canales que repiten el mismo video 10 veces se estancan).
 - Aprender una técnica nueva por video: la primera vez cuesta 3 h, después minutos.
