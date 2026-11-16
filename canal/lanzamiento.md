@@ -23,3 +23,8 @@
 - Después de 5 videos: mirar qué video tuvo el mejor CTR y la mejor retención → repetir esa promesa/formato.
 - Cambiar 1 sola variable por video.
 - Monetización (YPP): 1.000 subs + 4.000 h o 10M vistas de Shorts → activar AdSense.
+
+## Al subir cada video (YouTube Studio → Elementos del video)
+- **Pantalla final (importante):** 5–20 s al final. Poner "Suscribirse" + "Video más reciente" (o el siguiente de la serie). → Los videos deben terminar con **~12 s de placa final con espacio libre** (logo arriba, zona vacía para los 2 elementos).
+- **Tarjetas:** solo cuando haya otros videos. 1–2 por video, en el momento en que se menciona un tema relacionado ("Mirá también…"). Links externos recién con YPP.
+- Al publicar un video nuevo → volver a editar el anterior: tarjeta + pantalla final apuntando al nuevo.

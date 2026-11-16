@@ -10,7 +10,7 @@ const C = {bg: '#0E0F12', green: '#3DDC84', red: '#FF3B30', yel: '#FFD60A', whit
 const FONT = 'Inter, "Inter Display", sans-serif';
 const W_ = words as {w: string; s: number; e: number}[];
 const VOICE_END = W_[W_.length - 1].e;
-const END_CARD = 4;
+const END_CARD = 12; // espacio para la pantalla final de YouTube (5–20 s)
 export const FULL_FRAMES = Math.round((VOICE_END + END_CARD) * FPS);
 
 // tiempos de cada escena (en segundos), unificando escenas consecutivas con el mismo tablero final
