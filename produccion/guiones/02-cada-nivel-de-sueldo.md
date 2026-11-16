@@ -40,6 +40,7 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 [E06] [pausa] Spoiler: no va a cambiar. A menos que sepas esto.
 [E07] En cada nivel de sueldo, tu cerebro te tiene preparada una trampa distinta. Y funciona igual ganes 500 dólares… o 10.000.
 [E08] Hoy vamos a subir nivel por nivel: la trampa, el estudio que la explica, y cómo salir.
+[E08b] Nivel uno: la trampa que te roba la cabeza. Nivel dos: el número chiquito que te deja en deuda. Nivel tres: la compra que trae diez más. Nivel cuatro: el pago que no duele. Y nivel cinco: la jaula de oro.
 [E09] Y al final te voy a dar una sola regla, de una línea, que desarma todas las trampas a la vez. Es la que explica por qué ese frasco sigue vacío.
 
 ## 1. Nivel $500 — La escasez (1:00–2:45)
@@ -48,11 +49,13 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 [E12] Primera trampa: ser pobre es caro.
 [E13] Compras el paquete chico porque no te alcanza para el grande. Aunque el grande salga más barato.
 [E14] Pagas el recargo por atraso. El préstamo rápido. La comisión.
+[E14b] Ponle números: un préstamo rápido de cien dólares que te cobra veinte de interés. Para alguien que gana quinientos al mes, eso es más de un día de trabajo… perdido solo en intereses.
 [E15] {P} Y lo peor no está en tu billetera. Está en tu cabeza.
 [E16] En 2013, unos investigadores estudiaron a agricultores de caña de azúcar en la India.
 [E17] Les tomaron pruebas de razonamiento antes de la cosecha, cuando les faltaba dinero… y después, cuando ya habían cobrado.
 [E18] [pausa] Las mismas personas. Y antes de cobrar, les iba peor.
 [E19] Lo llamaron escasez: cuando falta dinero, la preocupación te ocupa la cabeza y queda menos espacio para pensar en todo lo demás.
+[E19b] Por eso las decisiones de dinero más difíciles las tomamos justo cuando peor estamos para tomarlas.
 [E20] {S} Entonces la solución no es "esfuérzate más". Es comprar aire.
 [E21] Aire es un pequeño colchón para que un imprevisto no te hunda. Empieza absurdo de chico: diez dólares por semana.
 [E22] En seis meses son doscientos sesenta. No te hace rico. Te saca del modo desesperado. Y con la cabeza libre, decides mejor.
@@ -66,20 +69,24 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 [E28] Cuando a la gente le mostraban el pago mínimo… terminaba pagando menos de lo que habría pagado sin verlo.
 [E29] [irónico] Un número chiquito, puesto ahí "para ayudarte", que se te pega en la cabeza como si fuera lo normal.
 [E30] Es un ancla. Y te ancla a la deuda. Pagando solo el mínimo, una deuda chica puede acompañarte durante años.
+[E30b] Haz la cuenta con Marcos: mil dólares en la tarjeta, pagando veinticinco al mes. Pasa un año… y la deuda casi no se mueve, porque los intereses se comen buena parte de cada pago.
 [E31] {S} La solución: elige tú tu número antes de abrir el estado de cuenta.
 [E32] Si el mínimo es veinticinco y puedes pagar cien, decide "cien" primero. Mejor todavía: el total.
 [E33] Que el banco no elija tu número por ti.
+[E33b] Y un truco extra: programa el pago automático por tu número, no por el mínimo. Lo que está automatizado no depende de tu fuerza de voluntad.
 [E34] {G} Sales de deudas, sube el sueldo, y te sientes por fin de clase media. Ahí es cuando una sola compra… se come todo.
 
 ## 3. Nivel $2.500 — La bata nueva (4:15–5:45)
 [E35] {P} Nivel tres. Dos mil quinientos dólares al mes.
 [E36] Ya puedes darte gustos. Uno solo, al principio.
+[E36b] Y este es el nivel donde más gente se queda atrapada sin darse cuenta.
 [E37] En 1769, el filósofo Denis Diderot escribió un ensayo muy raro: se quejaba… de una bata nueva.
 [E38] Se la habían regalado. Era elegante. Y de pronto, su escritorio viejo se veía feo al lado. Lo cambió.
 [E39] Después la silla. Después los cuadros. Después la biblioteca entera.
 [E40] {P} Una bata le cambió la casa. Y escribió que antes era dueño de su bata vieja… y ahora era esclavo de la nueva.
 [E41] Hoy se llama efecto Diderot: una compra que te arrastra a muchas otras.
 [E42] El celular nuevo pide funda, audífonos y plan caro. El departamento nuevo pide muebles que "combinen".
+[E42b] Marcos lo vivió así: se compró un reloj caro. Después sintió que su ropa no estaba a la altura del reloj. Después, que su auto no estaba a la altura de su ropa. ¿Adivinas cómo terminó? Exacto: con el auto rojo del estacionamiento.
 [E43] {S} La solución tiene dos preguntas. Antes de comprar: "¿qué otras compras me va a pedir esto?"
 [E44] Y si igual lo compras: "una entra, una sale". Algo nuevo reemplaza a algo viejo. No se suma.
 [E45] {G} Esta regla te salva de las compras grandes. Pero en el siguiente nivel, las compras ya no se pagan de una vez. Y ahí quiero que juegues conmigo.
@@ -97,8 +104,10 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 [E55] [pausa] Los que iban a pagar con tarjeta ofrecieron hasta el doble.
 [E56] Cuando el pago se aleja de la compra, deja de doler. Y lo que no duele, se compra más.
 [E57] Una cuota no es el problema. El problema son diez cuotas "chiquitas" que juntas se comen tu aumento.
+[E57b] Marcos llegó a tener ocho cuotas a la vez: el celular, el sillón, el viaje, la consola… Ninguna le parecía grande. Juntas, eran casi un tercio de su sueldo.
 [E58] {S} La solución: la regla de los treinta días. Si en un mes lo sigues queriendo, cómpralo. Muchas veces ya no lo vas a querer.
 [E59] Y una vez al mes, suma todas tus cuotas en una sola cifra. Ver el total junto vuelve a hacer que duela. Y eso te protege.
+[E59b] Pruébalo este mes: si tus cuotas juntas pasan del diez por ciento de lo que ganas, ya estás dentro de la trampa.
 [E60] {G} Ahora, ¿qué pasa cuando ya ganas muy bien? ¿Ahí se acaban las trampas? Quédate, porque esta es la que atrapa a la gente más exitosa.
 
 ## 5. Nivel $10.000 — Las esposas de oro (7:30–8:45)
@@ -109,6 +118,7 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 [E65] {P} En 1960, el historiador Cyril Northcote Parkinson escribió una frase que resume este video entero: el gasto sube hasta alcanzar al ingreso.
 [E66] No importa cuánto ganes. Si no haces nada, tus gastos crecen hasta comerse todo.
 [E67] Marcos gana veinte veces más que en el nivel uno. Y llega igual de justo a fin de mes.
+[E67b] Y lo más irónico: con todo lo que gana, Marcos no puede tomarse un mes libre. Ni cambiar de trabajo. Ni arriesgarse a nada. Gana mucho… y tiene menos libertad que nunca.
 [E68] {S} La salida aquí es contraintuitiva: vive como si ganaras el nivel anterior.
 [E69] Si ganas diez mil, ponle techo a tu vida en cinco mil. Lo que sobra no es "plata extra". Es tu libertad para irte cuando quieras.
 [E70] {G} Pero hay algo que todavía no te dije. Todo este tiempo estuvimos mirando la escalera equivocada.
@@ -118,6 +128,7 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 [E72] Es la diferencia entre lo que ganas y lo que gastas.
 [E73] Morgan Housel lo dice así en *La psicología del dinero*: la riqueza es lo que queda después de gastar lo que ganas.
 [E74] Alguien que gana dos mil quinientos y guarda quinientos… está más arriba que Marcos gastando sus diez mil.
+[E74b] Haz la cuenta: quinientos al mes son seis mil al año. En cinco años, treinta mil dólares, sin contar intereses. Marcos, en cinco años… tiene cuotas.
 [E75] Y aquí va la regla de una línea que te prometí al principio:
 [E76] [lento] Cada vez que te suban el sueldo, sube primero lo que guardas. Antes de que tu gasto se entere.
 [E77] Si te aumentan cien, guarda cincuenta. El gasto puede subir… pero detrás de ti, no delante.
@@ -141,7 +152,7 @@ Escalera de 5 escalones con precios ($500 → $10.000), Tú subiendo; en cada es
 | E53–E55 | Subasta de entradas de los Celtics: con tarjeta ofrecían hasta el doble | Prelec y Simester, *Marketing Letters* (2001) |
 | E65 | "El gasto sube hasta alcanzar al ingreso" | C. Northcote Parkinson, *The Law and the Profits* (1960) |
 | E73 | La riqueza es lo que queda después de gastar | Morgan Housel, *The Psychology of Money* (2020) |
-| E21–E22, E32, E44, E58–E59, E69, E77 | Soluciones con números (10 USD/semana, "una entra una sale", 30 días, techo de nivel, 50% del aumento) | Reglas prácticas del canal (ejemplos, no estudios) |
+| E14b, E21–E22, E30b, E32, E44, E58–E59b, E69, E74b, E77 | Ejemplos y soluciones con números (préstamo de 100 con 20 de interés, 10 USD/semana, mínimo de 25, cuotas >10%, techo de nivel, 500/mes → 30.000 en 5 años, 50% del aumento) | Ejemplos ilustrativos y reglas prácticas del canal (no estudios) |
 
 ⚠️ Antes de producir: confirmar la redacción del efecto de Stewart y la cita exacta de Parkinson.
 
