@@ -9,3 +9,9 @@ produccion/remotion/out/*-COMPLETO.mp4
 produccion/remotion/out/*-YOUTUBE.mp4
 produccion/remotion/out/video*-YOUTUBE.mp4
 produccion/remotion/public/escenas2/*.png
+
+# piezas temporales del render por partes
+produccion/remotion/out/v3-part*.mp4
+produccion/remotion/out/v3-audio.wav
+produccion/remotion/out/v3-list.txt
+produccion/remotion/out/raw-*.mp4
