@@ -52,5 +52,5 @@ Orden recomendado (actualizado con datos): **Parece pobre → Tarjeta (#2) → N
 - De cada video largo: 2–3 Shorts de 30–50 s con la escena "Imagina esto" + giro + "video completo en el canal".
 
 ## Calendario
-- Martes y viernes: video largo (5–10 min). Lunes, miércoles y sábado: Short.
+- Lunes, miércoles y viernes: video largo (5–10 min). Todos los días: 1 Short.
 - Meta de los primeros 30 días: 8 largos + 15 Shorts.

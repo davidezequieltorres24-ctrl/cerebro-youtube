@@ -5,7 +5,7 @@
 - **Nicho:** Finanzas personales (CPM alto) × Psicología (ideal para animación) → **psicología del dinero**
 - **Sub-nicho único:** las trampas mentales que te hacen gastar, endeudarte o no ahorrar, contadas en segunda persona.
 - **Idioma:** español neutro, con **"tú"** para llegar a todos los países. Países objetivo: EE.UU. (hispanos), España y México (mejor CPM), después Colombia y Argentina.
-- **Formato:** videos de **5–10 min** (decisión del dueño, 16/11/2026). Ideal 8–10 para sumar horas de reproducción (2 por semana) + 2–3 **Shorts** sacados de cada video largo.
+- **Formato:** videos de **5–10 min** (decisión del dueño, 16/11/2026). Ideal 8–10 para sumar horas de reproducción (3 por semana: lun/mié/vie) + 2–3 **Shorts** sacados de cada video largo.
 - **Faceless:** sí. Voz IA (ElevenLabs), animación 2D/3D simple hecha con Claude Code (Three.js + Remotion).
 - **Personaje:** "**Tú**": figura simple (stick figure) con billetera. **Mascota:** un cerebro rosado con etiqueta de precio colgando (la voz de "tu mente que gasta"), el saboteador simpático.
 - **Promesa (igual en todos los videos):** "Cada video te muestra una trampa que tu cerebro te tiende con el dinero, por qué caes y cómo salir."
