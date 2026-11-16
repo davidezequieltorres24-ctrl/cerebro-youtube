@@ -57,3 +57,11 @@
 - Lo que más se lee de lejos: **dos caras grandes con emociones opuestas + contraste rojo/verde** (comparación + emoción).
 - Pedir a la IA **líneas más gruesas y brillantes** que en las escenas del video ("THICK bold glowing neon outlines").
 - Texto: letra clara + borde negro grueso + brillo del color (igual que en el video). Fondo oscuro difuminado detrás.
+
+## Referencias del dueño (16/11/2026): vender el RESULTADO, no el contenido
+- **Número grande protagonista** ($0 → $21.607, 820K, $9.119): se entiende en medio segundo.
+- **Elemento de interfaz real** (tarjeta blanca tipo YouTube Studio / app del banco) → parece una captura = credibilidad.
+- **Antes → después con flecha**, rojo vs verde. **Línea de gráfico** que sube = emoción del resultado.
+- Pocos elementos, fondo oscuro con grilla sutil, mucho contraste. Los números y la interfaz se hacen POR CÓDIGO (PIL), nunca con IA (deforma el texto).
+- La miniatura no tiene que mostrar el contenido: tiene que dar un mensaje claro que genere el clic. La retención la gana el video.
+- Script reutilizable: tarjeta de interfaz + número + flecha curva + capa de dibujo con fusión "screen" (el negro desaparece).

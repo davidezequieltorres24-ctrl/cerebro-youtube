@@ -2,10 +2,11 @@
 
 **Título:** Por qué gastas más cuando pagas con tarjeta
 **Título alternativo (Probar y comparar):** Por qué pagar con tarjeta te hace gastar más
-**Miniaturas (subir las 3 a "Probar y comparar"):**
-- Principal: canal/assets/video3-tarjeta-A-comparacion.jpg ("DUELE / NO DUELE": misma cara en rojo con efectivo y en verde con tarjeta)
-- canal/assets/video3-tarjeta-B-no-lo-ves.jpg ("NO LO VES": cerebro con la tarjeta como venda)
-- canal/assets/video3-tarjeta-C-no-duele.jpg ("NO DUELE": tarjeta gigante + Tú chiquito)
+**Miniaturas (subir 3 a "Probar y comparar"):**
+- Principal: canal/assets/video3-tarjeta-D-87-174.jpg ("EFECTIVO $87 → TARJETA $174": número grande + antes/después, como las referencias del dueño)
+- canal/assets/video3-tarjeta-E-en-que.jpg (tarjeta de app "Gastos con tarjeta $1.240 ↑" + gráfico rojo que sube + "¿EN QUÉ?")
+- canal/assets/video3-tarjeta-A-comparacion.jpg ("DUELE / NO DUELE")
+- Reserva: video3-tarjeta-B-no-lo-ves.jpg, video3-tarjeta-C-no-duele.jpg
 **Duración:** 4:52 · estilo nuevo (neón + dibujo de líneas brillantes, inspirado en Isaac).
 
 **Descripción:**
