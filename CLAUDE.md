@@ -10,6 +10,7 @@ Leé SOLO el archivo que necesite la tarea.
 | Ideas de videos y calendario | `canal/plan-contenido.md` |
 | Pasos para lanzar el canal | `canal/lanzamiento.md` |
 | Competencia, canales modelo y qué temas funcionan | `canal/competencia.md` |
+| Plan para MONETIZAR rápido (fecha límite 1/2/2027) | `canal/estrategia-monetizacion.md` |
 | Historial y métricas de videos | `contenido/publicados.md` |
 | Escribir guion / mejorar retención | `conocimiento/guiones-retencion.md` |
 | Títulos y miniaturas | `conocimiento/titulos-miniaturas.md` |
