@@ -1,7 +1,7 @@
 # Video 1 — datos para subir
 
 **Título:** Por qué la gente que parece pobre tiene más dinero que tú
-**Miniatura:** canal/assets/video-parece-pobre-miniatura.png (alternativa para "Probar y comparar": hacer una 2.ª versión)
+**Miniatura:** canal/assets/video1-parece-pobre-A-iceberg.jpg (principal) · prueba: canal/assets/video1-parece-pobre-B-comparacion.jpg
 
 **Descripción:**
 Tu compañero estrena auto y todos lo aplauden… pero ¿quién tiene más dinero de verdad? En este video vemos por qué lo que muestras con dinero es dinero que ya no tienes, qué descubrieron los estudios sobre los millonarios "de al lado" y cómo ganar el juego que nadie ve.
