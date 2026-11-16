@@ -1,7 +1,8 @@
 # Cerebro YouTube
 
 Base de conocimiento para el canal **Tu Mente Gasta** (psicología del dinero, faceless, español neutro, hecho con IA).
-Leé SOLO el archivo que necesite la tarea.
+**Al empezar un chat: leé `contenido/estado.md` (dónde quedamos).** Después, leé SOLO el archivo que necesite la tarea.
+Para cerrar y limpiar el chat: skill `guardar-y-limpiar`.
 
 | Tarea | Leer |
 |---|---|
