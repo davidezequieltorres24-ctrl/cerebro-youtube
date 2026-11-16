@@ -4,7 +4,7 @@ Base de conocimiento para el canal **Tu Mente Gasta** (psicología del dinero, f
 **Al empezar un chat: leé `contenido/estado.md` (dónde quedamos).** Después, leé SOLO el archivo que necesite la tarea.
 Para cerrar y limpiar el chat: skill `guardar-y-limpiar`.
 Para producir un video completo de Tu Mente Gasta: skill `video-tu-mente-gasta` (`.claude/skills/video-tu-mente-gasta/SKILL.md`).
-Otros canales del dueño (ej. **UniversoYSI**) tendrán su propio skill copiando ese y cambiando la sección "Ficha del canal".
+Segundo canal del dueño: **Universo Y Si** (@UniversoYSi, historias animadas «¿Y si…?»): todo en `universo-y-si/` (empezar por `universo-y-si/guia.md`) y skill `video-universo-y-si`. No mezclar reglas de un canal con el otro.
 
 | Tarea | Leer |
 |---|---|

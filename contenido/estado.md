@@ -24,7 +24,7 @@
 ## Herramientas nuevas (16/11)
 - Skill **`video-tu-mente-gasta`**: el proceso completo de un video (tema → guion → voz → escenas → montaje → render por partes → 3 miniaturas + 3 títulos → ficha).
 - Scripts: `produccion/remotion/scripts/render-parte.sh`, `unir.sh`, `tiempos_whisper.py`. Subtítulos por frase: `src/captionChunks.ts`.
-- Pendiente: el dueño pasa la info de su otro canal **UniversoYSI** → crear su skill propio.
+- **Universo Y Si** (2.º canal): guía en `universo-y-si/guia.md` + skill `video-universo-y-si` (16/11). Video 1 (crucero con tu crush) hecho en otro chat; sus archivos no están en este repo.
 
 ## Próximos pasos
 1. Recordarle al dueño: publicar el 2, después editar el video 1 (y el 2 al publicar el 3) → tarjeta + pantalla final hacia el siguiente.
