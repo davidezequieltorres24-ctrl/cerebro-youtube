@@ -31,3 +31,23 @@
 - Re-enganche cada 60–90 s ("quédate, porque esta es la que atrapa a…").
 - Frases cortas, preguntas directas, una mini encuesta ("elige una mentalmente… ¿ya?").
 - En pantalla: sello rojo "PROBLEMA" / verde "SOLUCIÓN" al entrar en cada parte.
+
+## Proceso de guion de Isaac ("How I Actually Write Viral Scripts", 309K vistas)
+**Antes de escribir (nunca empezar con la hoja en blanco):**
+1. **Objetivo común:** lo que quiere el espectador = lo que quiero yo. Si no coinciden (ej. gurú que vende curso), el video "se siente falso".
+2. **Problema superficial + problema profundo:** el tema técnico es la superficie; debajo hay una lucha emocional (paciencia, perfeccionismo, miedo a quedarse atrás). El profundo es lo que hace que el video sea "tuyo" y conecte.
+3. **Miniatura antes del guion:** el guion tiene que cumplir la promesa de la miniatura.
+4. **Avatar:** 1–2 perfiles del espectador → define el nivel de complejidad.
+5. **Investigar y buscar el HUECO:** qué NO explicaron los otros videos → ahí está la oportunidad.
+6. **Punto de partida y de llegada:** dónde está el protagonista al inicio y quién es al final (transformación clara).
+7. **Viaje del héroe adaptado a YouTube:** status quo → llamado (problema/curiosidad) → mentor → partida → pruebas (los puntos del video) → aparece el problema profundo → **crisis** (punto más bajo, mostrarse vulnerable) → tesoro (la lección) → resultado → regreso → vida nueva.
+8. *(Avanzado)* **Gran historia:** cada video es un capítulo de una historia mayor (como Marvel).
+9. **Pedirle a la IA que DESTROCE el esquema**, no que escriba el guion (si lo escribe, sale genérico).
+**Al escribir:**
+- Borrador rápido con temporizador, sin corregir.
+- **Complejidad en rampa:** contexto simple al inicio → conceptos más complejos después.
+- **Hacer que el espectador lo descubra:** dejar pistas y preguntar ("¿te das cuenta cuál es…?") en vez de decirlo → lo vuelve una conversación.
+- **"PERO / POR ESO" en vez de "y entonces"** (regla de los guionistas de South Park).
+- **Ritmo:** alternar frases cortas y largas.
+- Notas de edición dentro del guion (qué se ve en cada frase).
+- No sacrificar valor real solo para subir la retención: el video tiene que tener "alma".
