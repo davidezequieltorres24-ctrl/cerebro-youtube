@@ -61,7 +61,7 @@ const Whip: React.FC<{children: React.ReactNode; dir: number}> = ({children, dir
   const x = interpolate(frame, [0, 8], [dir * 1920 * 0.25, 0], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
   const blur = interpolate(frame, [0, 8], [18, 0], {extrapolateRight: 'clamp'});
   const op = interpolate(frame, [0, 4], [0, 1], {extrapolateRight: 'clamp'});
-  return <AbsoluteFill style={{transform: `translateX(${x}px)`, filter: blur > 0.2 ? `blur(${blur}px)` : undefined, opacity: op}}>{children}</AbsoluteFill>;
+  return <AbsoluteFill style={{transform: `translateX(${x}px)`, opacity: op}}>{children}</AbsoluteFill>;
 };
 
 const Sparkles: React.FC<{x: number; y: number}> = ({x, y}) => {

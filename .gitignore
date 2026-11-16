@@ -4,3 +4,4 @@ produccion/remotion/words.json
 produccion/remotion/public/escenas/*.png
 produccion/remotion/public/*.png.bak
 produccion/remotion/refs.json
+produccion/remotion/out/raw-*.mp4
