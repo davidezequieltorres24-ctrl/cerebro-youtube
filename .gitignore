@@ -21,3 +21,4 @@ produccion/remotion/out/*-list.txt
 __pycache__/
 produccion/remotion/public/uys-2/planos/p*.png
 produccion/remotion/public/uys-2/voz/*.wav
+produccion/remotion/out/uys2-muestra.mp4
