@@ -56,3 +56,12 @@
 8. **APIMart:** las referencias subidas vencen a los 3 días → volver a subir la hoja de personajes en cada video nuevo (`refs.json`).
 9. **Escenas:** pedir "no readable text" porque igual a veces aparece texto en inglés; revisar la hoja de contactos antes de montar.
 10. **Calendario realista para 3 videos/semana:** día 1 guion + voz + escenas (~2 h de trabajo) · día 1–2 render (~3 h) · día 2 subir + Shorts.
+
+## Costos comparados por video (~9 min, 16/11/2026)
+| Recurso | APIMart | ElevenLabs |
+|---|---|---|
+| Voz | gpt-4o-mini-tts (voces onyx/echo, con `instructions` en español): **~US$0,015 por 1.000 caracteres** → ~US$0,13 por video | v4 "Carlos": ~8.700 créditos por video; gratis = 10.000/mes (1 video). Necesita plan pago para 12 videos/mes |
+| Imágenes | Nano Banana 2: ~US$0,014 c/u → ~US$1,20 por video (85 escenas) | 3 imágenes/día en el plan gratis (no sirve para volumen) |
+| Música/SFX | — | ElevenLabs (ya generados; se reutilizan) |
+- Endpoint voz APIMart: `POST https://api.apimart.ai/v1/audio/speech` {model: gpt-4o-mini-tts, voice, input (máx 4.096 caracteres), instructions, response_format: mp3}.
+- Calidad: se entiende perfecto (Whisper: español 100%), pero menos expresiva que ElevenLabs v4 y sin las etiquetas de emoción.
