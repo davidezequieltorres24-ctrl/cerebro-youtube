@@ -19,3 +19,5 @@ produccion/remotion/out/*-part*.mp4
 produccion/remotion/out/*-audio.wav
 produccion/remotion/out/*-list.txt
 __pycache__/
+produccion/remotion/public/uys-2/planos/p*.png
+produccion/remotion/public/uys-2/voz/*.wav
