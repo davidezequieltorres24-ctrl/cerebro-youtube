@@ -7,8 +7,9 @@ import {ThreeCanvas} from '@remotion/three';
 import words from './words.json';
 
 const FPS = 30;
-export const TOTAL_FRAMES = Math.round(41 * FPS);
-const f = (s: number) => Math.round(s * FPS);
+const SPEED = 1.15; // voz acelerada: todos los tiempos del guion se escalan
+export const TOTAL_FRAMES = Math.round((37.8 / SPEED + 3.2) * FPS);
+const f = (s: number) => Math.round((s / SPEED) * FPS);
 const C = {bg: '#0E0F12', green: '#3DDC84', red: '#FF3B30', yel: '#FFD60A', white: '#F5F3EE', pink: '#FF6FAE', cream: '#FBF6E9'};
 const FONT = 'Inter, "Inter Display", sans-serif';
 
@@ -81,7 +82,7 @@ const Sparkles: React.FC<{start: number; cx: number; cy: number; n?: number; spr
 const KEY = ['auto', 'brillante', 'autobús', 'sudadera', 'gris', 'perdiendo', 'dinero', 'verdad', 'tú', 'guardarlo', '1996', 'millonarios', 'usados', 'muestras', 'tienes', 'disfraz', 'gana'];
 const Captions: React.FC = () => {
   const frame = useCurrentFrame();
-  const t = frame / FPS;
+  const t = (frame / FPS) * SPEED;
   const W = words as {w: string; s: number; e: number}[];
   // agrupar en frases de hasta 5 palabras o hasta un punto
   const groups: typeof W[] = [];
@@ -227,7 +228,7 @@ const Card: React.FC<{delay: number; title: string; amount: string; color: strin
 
 const S4: React.FC = () => {
   const frame = useCurrentFrame();
-  const t = frame / FPS + 15.5;
+  const t = (frame / FPS) * SPEED + 15.5;
   const hlLeft = t > 16.85 && t < 17.9;
   const hlRight = t >= 18.0;
   return (
@@ -284,7 +285,7 @@ const S6: React.FC = () => (
 
 const S7: React.FC = () => {
   const frame = useCurrentFrame();
-  const t = frame / FPS + 28.1;
+  const t = (frame / FPS) * SPEED + 28.1;
   const val = Math.round(interpolate(t, [28.6, 31.0], [25000, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.in(Easing.quad)}));
   const zero = val === 0;
   const sat = interpolate(t, [30.8, 31.3], [1, 0.3], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -342,7 +343,7 @@ const End: React.FC = () => {
 // ---------- montaje ----------
 const SCENES: [number, number, React.FC][] = [
   [0, 5.9, S1], [5.9, 12.3, S2], [12.3, 15.5, S3], [15.5, 19.5, S4], [19.5, 25.25, S5],
-  [25.25, 28.15, S6], [28.15, 32.1, S7], [32.1, 37.8, S8], [37.8, 41, End],
+  [25.25, 28.15, S6], [28.15, 32.1, S7], [32.1, 37.8, S8], [37.8, 37.8 + 3.2 * SPEED, End],
 ];
 const SFX: [number, string, number][] = [
   [0, 'sfx-whoosh.mp3', 0.5], [4.25, 'sfx-aplausos.mp3', 0.55], [5.85, 'sfx-whoosh.mp3', 0.6], [8.2, 'sfx-pop.mp3', 0.6],
@@ -354,7 +355,7 @@ const SFX: [number, string, number][] = [
 
 export const ParecePobre: React.FC = () => {
   const frame = useCurrentFrame();
-  const musicVol = interpolate(frame, [0, 15, TOTAL_FRAMES - 45, TOTAL_FRAMES], [0, 0.13, 0.13, 0], {extrapolateRight: 'clamp'});
+  const musicVol = interpolate(frame, [0, 15, TOTAL_FRAMES - 45, TOTAL_FRAMES], [0, 0.06, 0.06, 0], {extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill style={{background: C.bg}}>
       {SCENES.map(([s, e, Comp], i) => (
@@ -363,11 +364,11 @@ export const ParecePobre: React.FC = () => {
         </Sequence>
       ))}
       <Captions />
-      <Audio src={staticFile('voz.mp3')} />
+      <Audio src={staticFile('voz-rapida.mp3')} />
       <Audio src={staticFile('musica.mp3')} volume={() => musicVol} />
       {SFX.map(([s, file, vol], i) => (
         <Sequence key={`sfx${i}`} from={f(s)} durationInFrames={f(3)}>
-          <Audio src={staticFile(file)} volume={vol} />
+          <Audio src={staticFile(file)} volume={vol * 0.35} />
         </Sequence>
       ))}
     </AbsoluteFill>
