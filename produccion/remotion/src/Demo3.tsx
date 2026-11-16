@@ -2,7 +2,7 @@
 // Técnicas: neón sobre negro, líneas que se dibujan, texto borroso→nítido, pop 70→110→100,
 // destellos de luz entre escenas, historia en dibujo de líneas brillantes que cambia de color con la emoción.
 import React from 'react';
-import {AbsoluteFill, Audio, Img, Sequence, interpolate, staticFile, useCurrentFrame, Easing, random} from 'remotion';
+import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, Easing, random} from 'remotion';
 import words from './words-demo3.json';
 
 const FPS = 30;
@@ -13,6 +13,9 @@ const f = (s: number) => Math.round(s * FPS);
 const C = {bg: '#050608', green: '#3DDC84', yel: '#FFD60A', cyan: '#33E1FF', red: '#FF3B30', amber: '#FFB547', white: '#F5F3EE'};
 const FONT = 'Inter, sans-serif';
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
+// Texto neón LEGIBLE: letra casi blanca teñida + contorno fino del color + halo corto. (El halo grande se reserva para trazos.)
+const tint = (c: string) => `color-mix(in srgb, ${c} 35%, white)`;
+const neonText = (c: string): React.CSSProperties => ({color: tint(c), WebkitTextStroke: `2px ${c}`, paintOrder: 'stroke fill', textShadow: `0 0 6px ${c}aa, 0 0 18px ${c}55`});
 const glow = (c: string, r = 18) => `drop-shadow(0 0 ${r / 3}px ${c}) drop-shadow(0 0 ${r}px ${c})`;
 
 // ---------- piezas reutilizables ----------
@@ -29,7 +32,7 @@ const Pop: React.FC<{at: number; children: React.ReactNode; style?: React.CSSPro
 const BlurText: React.FC<{text: string; at: number; size: number; color?: string; weight?: number; stagger?: number; glowC?: string}> = ({text, at, size, color = C.white, weight = 900, stagger = 1.2, glowC}) => {
   const fr = useCurrentFrame() - at;
   return (
-    <span style={{fontFamily: FONT, fontWeight: weight, fontSize: size, color, letterSpacing: -1, whiteSpace: 'pre', filter: glowC ? glow(glowC, 14) : undefined}}>
+    <span style={{fontFamily: FONT, fontWeight: weight, fontSize: size, color, letterSpacing: -1, whiteSpace: 'pre', ...(glowC ? neonText(glowC) : {textShadow: '0 2px 10px #000'})}}>
       {text.split('').map((ch, i) => {
         const p = interpolate(fr - i * stagger, [0, 9], [0, 1], clamp);
         return <span key={i} style={{opacity: p, filter: p < 1 ? `blur(${(1 - p) * 10}px)` : undefined, display: 'inline-block', transform: `translateY(${(1 - p) * 8}px)`}}>{ch}</span>;
@@ -79,6 +82,17 @@ const KB: React.FC<{src: string; from: number; dur: number; z: [number, number];
     </AbsoluteFill>
   );
 };
+// Clip animado por IA (cada tantas escenas) con zoom lento hacia el punto de foco
+const Clip: React.FC<{src: string; dur: number; start?: number; z: [number, number]; fx: number; fy: number; filter?: string; whip?: number}> = ({src, dur, start = 0, z, fx, fy, filter, whip = 0}) => {
+  const fr = useCurrentFrame();
+  const t = interpolate(fr, [0, dur], [0, 1], {...clamp, easing: Easing.inOut(Easing.quad)});
+  const x = whip ? interpolate(fr, [0, 8], [whip * 380, 0], {...clamp, easing: Easing.out(Easing.cubic)}) : 0;
+  return (
+    <AbsoluteFill style={{overflow: 'hidden', transform: `translateX(${x}px)`}}>
+      <OffthreadVideo src={staticFile(src)} startFrom={Math.round(start * FPS)} muted style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${z[0] + (z[1] - z[0]) * t})`, transformOrigin: `${fx * 100}% ${fy * 100}%`, filter}} />
+    </AbsoluteFill>
+  );
+};
 const Vignette: React.FC<{k?: number; color?: string}> = ({k = 0.6, color = '0,0,0'}) => (
   <AbsoluteFill style={{background: `radial-gradient(ellipse at center, rgba(${color},0) 45%, rgba(${color},${k}) 100%)`}} />
 );
@@ -119,7 +133,7 @@ const S1: React.FC = () => (
 
 const S2: React.FC<{dur: number}> = ({dur}) => (
   <AbsoluteFill>
-    <KB src="demo3/l01.jpg" from={0} dur={dur} z={[1.0, 1.12]} fx={0.42} fy={0.6} />
+    <Clip src="demo3/c01.mp4" dur={dur} z={[1.0, 1.08]} fx={0.42} fy={0.6} />
     <Dust />
     <Vignette k={0.7} />
   </AbsoluteFill>
@@ -132,7 +146,7 @@ const S3: React.FC = () => {
     <AbsoluteFill style={{background: C.bg}}>
       <Stroke d={box(660, 300, 600, 380)} at={0} dur={16} color={C.yel} />
       <Center y={400}><BlurText text="TOTAL" at={12} size={54} color="#cfcfcf" weight={700} /></Center>
-      {fr >= 16 && <Center y={530}><Pop at={16}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 190, color: C.yel, filter: glow(C.yel, 22), fontVariantNumeric: 'tabular-nums'}}>${n}</span></Pop></Center>}
+      {fr >= 16 && <Center y={530}><Pop at={16}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 190, ...neonText(C.yel), fontVariantNumeric: 'tabular-nums'}}>${n}</span></Pop></Center>}
     </AbsoluteFill>
   );
 };
@@ -145,13 +159,13 @@ const S4: React.FC<{dur: number}> = ({dur}) => {
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{transform: `scale(${punch})`}}>
-        <KB src="demo3/l01.jpg" from={0} dur={dur} z={[1.25, 1.9]} fx={0.43} fy={0.66} />
+        <Clip src="demo3/c01.mp4" start={T.total - T.caja} dur={dur} z={[1.25, 1.8]} fx={0.43} fy={0.66} />
       </AbsoluteFill>
       <Vignette k={0.75} />
       {fr >= bip && (
         <>
           <div style={{position: 'absolute', left: 1180, top: 560, width: 260, height: 260, transform: `translate(-50%,-50%) scale(${0.4 + ring * 0.8})`, borderRadius: '50%', border: `8px solid ${C.green}`, opacity: 1 - ring * 0.6, filter: glow(C.green, 20)}} />
-          <div style={{position: 'absolute', left: 1180, top: 560, transform: 'translate(-50%,-50%)'}}><Pop at={bip + 2}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 110, color: C.green, filter: glow(C.green, 18)}}>✓</span></Pop></div>
+          <div style={{position: 'absolute', left: 1180, top: 560, transform: 'translate(-50%,-50%)'}}><Pop at={bip + 2}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 110, ...neonText(C.green)}}>✓</span></Pop></div>
         </>
       )}
     </AbsoluteFill>
@@ -174,10 +188,10 @@ const S6: React.FC<{dur: number}> = ({dur}) => {
   const shift = Math.sin(fr * 2.3) * 14;
   return (
     <AbsoluteFill style={{background: '#0b0b10'}}>
-      <KB src="demo3/l01.jpg" from={0} dur={dur} z={[1.9, 1.0]} fx={0.43} fy={0.66} filter={`saturate(.4) contrast(1.2) brightness(.7) hue-rotate(${shift}deg)`} />
+      <OffthreadVideo src={staticFile('demo3/c01-rev.mp4')} muted playbackRate={2.5} style={{width: '100%', height: '100%', objectFit: 'cover', filter: `saturate(.4) contrast(1.2) brightness(.7) hue-rotate(${shift}deg)`}} />
       <AbsoluteFill style={{backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 2px, transparent 2px 5px)', transform: `translateY(${(fr * 9) % 10}px)`}} />
       <div style={{position: 'absolute', left: 0, right: 0, top: (fr * 47) % 1080, height: 26, background: 'rgba(255,255,255,.18)'}} />
-      <div style={{position: 'absolute', left: 90, top: 70, fontFamily: FONT, fontWeight: 900, fontSize: 92, color: C.white, filter: glow('#fff', 10), opacity: fr % 10 < 6 ? 1 : 0.4}}>◀◀</div>
+      <div style={{position: 'absolute', left: 90, top: 70, fontFamily: FONT, fontWeight: 900, fontSize: 92, color: C.white, textShadow: '0 0 8px #fff8', opacity: fr % 10 < 6 ? 1 : 0.4}}>◀◀</div>
       <Center y={540}><BlurText text="REBOBINA" at={2} size={140} color={C.white} stagger={0.6} /></Center>
     </AbsoluteFill>
   );
@@ -185,7 +199,7 @@ const S6: React.FC<{dur: number}> = ({dur}) => {
 
 const S7: React.FC<{dur: number}> = ({dur}) => (
   <AbsoluteFill>
-    <KB src="demo3/l01.jpg" from={0} dur={dur} z={[1.05, 1.15]} fx={0.3} fy={0.5} whip={-1} />
+    <Clip src="demo3/c01.mp4" dur={dur} z={[1.05, 1.12]} fx={0.3} fy={0.5} whip={-1} />
     <Vignette k={0.7} />
     <div style={{position: 'absolute', left: 1180, top: 210}}><BlurText text="Mismo súper." at={2} size={70} glowC={C.amber} /></div>
     <div style={{position: 'absolute', left: 1180, top: 310}}><BlurText text="Mismo carrito." at={f(word('mismo', 12.5) - T.mismo)} size={70} glowC={C.amber} /></div>
@@ -194,9 +208,9 @@ const S7: React.FC<{dur: number}> = ({dur}) => (
 
 const S7b: React.FC<{dur: number}> = ({dur}) => (
   <AbsoluteFill>
-    <KB src="demo3/billetes.jpg" from={0} dur={dur} z={[1.15, 1.3]} fx={0.35} fy={0.6} whip={1} filter="contrast(1.1) saturate(1.1)" />
+    <Clip src="demo3/c03.mp4" dur={dur} z={[1.1, 1.2]} fx={0.35} fy={0.6} whip={1} filter="contrast(1.1) saturate(1.1)" />
     <Vignette k={0.8} />
-    <div style={{position: 'absolute', left: 1240, top: 470}}><Pop at={2}><span style={{fontFamily: FONT, fontWeight: 900, fontStyle: 'italic', fontSize: 120, color: C.yel, filter: glow(C.yel, 14)}}>efectivo</span></Pop></div>
+    <div style={{position: 'absolute', left: 1240, top: 470}}><Pop at={2}><span style={{fontFamily: FONT, fontWeight: 900, fontStyle: 'italic', fontSize: 120, ...neonText(C.yel), textShadow: '0 0 6px #FFD60Aaa, 0 0 18px #FFD60A55, 0 4px 16px #000'}}>efectivo</span></Pop></div>
     <Stroke d="M 1230 620 C 1400 640, 1560 600, 1700 615" at={6} dur={12} color={C.yel} />
   </AbsoluteFill>
 );
@@ -213,7 +227,7 @@ const S8: React.FC = () => {
         <React.Fragment key={i}>
           <Stroke d={box(250 + i * 370, 380, 320, 170, 18)} at={t} dur={9} color={cols[i]} />
           {fr >= t + 4 && <div style={{position: 'absolute', left: 250 + i * 370, top: 380, width: 320, height: 170, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <Pop at={t + 4}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 96, color: cols[i], filter: glow(cols[i], 12)}}>{i + 1}</span></Pop></div>}
+            <Pop at={t + 4}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 96, ...neonText(cols[i])}}>{i + 1}</span></Pop></div>}
         </React.Fragment>
       ))}
       <Center y={720}><BlurText text="cada billete que sale, lo ves" at={4} size={44} color="#9a9a9a" weight={600} stagger={0.5} /></Center>
@@ -228,7 +242,7 @@ const S9: React.FC<{dur: number}> = ({dur}) => {
   const pulse = beat(f(20.4 - T.pecho)) + beat(f(21.0 - T.pecho));
   return (
     <AbsoluteFill style={{transform: `scale(${1 + pulse * 0.025})`}}>
-      <KB src="demo3/l02.jpg" from={0} dur={dur} z={[1.05, 1.18]} fx={0.32} fy={0.55} filter="hue-rotate(-28deg) saturate(1.6) brightness(1.05)" />
+      <Clip src="demo3/c02.mp4" start={0.4} dur={dur} z={[1.05, 1.15]} fx={0.32} fy={0.45} filter="hue-rotate(-28deg) saturate(1.6) brightness(1.05)" />
       <Vignette k={0.55 + pulse * 0.35} color="90,0,0" />
     </AbsoluteFill>
   );
@@ -240,7 +254,7 @@ const S10: React.FC = () => {
   return (
     <AbsoluteFill style={{background: C.bg}}>
       <Center y={380}><BlurText text="Eso tiene nombre:" at={2} size={56} color="#bdbdbd" weight={600} /></Center>
-      {fr >= dolor && <Center y={540}><Pop at={dolor}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 150, color: C.white, letterSpacing: -3}}>EL DOLOR DE <span style={{color: C.red, filter: glow(C.red, 16)}}>PAGAR</span></span></Pop></Center>}
+      {fr >= dolor && <Center y={540}><Pop at={dolor}><span style={{fontFamily: FONT, fontWeight: 900, fontSize: 150, color: C.white, letterSpacing: -3}}>EL DOLOR DE <span style={neonText(C.red)}>PAGAR</span></span></Pop></Center>}
       <Stroke d="M 330 660 C 700 690, 1200 640, 1590 665 S 1880 700, 2050 620" at={dolor + 8} dur={20} color={C.red} width={9} />
     </AbsoluteFill>
   );

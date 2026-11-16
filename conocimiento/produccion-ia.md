@@ -65,3 +65,13 @@
 | Música/SFX | — | ElevenLabs (ya generados; se reutilizan) |
 - Endpoint voz APIMart: `POST https://api.apimart.ai/v1/audio/speech` {model: gpt-4o-mini-tts, voice, input (máx 4.096 caracteres), instructions, response_format: mp3}.
 - Calidad: se entiende perfecto (Whisper: español 100%), pero menos expresiva que ElevenLabs v4 y sin las etiquetas de emoción.
+
+## ✅ Clips con movimiento (desde 16/11/2026, demo del video 3)
+- **Regla: 1 clip animado cada 3–5 escenas** (las escenas clave de la historia). El resto: imagen fija + Ken Burns + animación por código.
+- **APIMart `seedance-1-0-pro-fast`**: imagen → video de 5 s en 1080p, **US$0,21**, listo en ~1 min. `POST /v1/videos/generations` {model, prompt, image_urls:[url], duration:5, resolution:"1080p", aspect_ratio:"16:9"} → `GET /v1/tasks/{task_id}`.
+  - Subir la imagen antes: `POST /v1/uploads/images?retention_days=3` (multipart `file`).
+  - Prompt: describir **el movimiento**, no la imagen + "keep the exact style, consistent character, no deformation, no text".
+  - Sale en 1920×1088 a 24 cps → `ffmpeg -vf "crop=1920:1080,fps=30"`. Los billetes/objetos se deforman a los 3–4 s: usar solo el principio.
+  - Truco: el mismo clip **al revés** (`-vf reverse`) sirve para "rebobinar".
+- ElevenLabs cobra ~2.100 créditos (Kling 2.5 Turbo) o ~7.300 (Seedance) por clip → NO usarlo para clips.
+- Texto en neón: **letra clara + borde fino del color + halo corto**. El brillo fuerte (drop-shadow doble) solo en líneas y cajas; sobre letras satura y no se lee.
