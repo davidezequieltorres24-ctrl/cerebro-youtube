@@ -15,6 +15,7 @@ STYLE = ("16:9 landscape scene in EXACTLY the same warm hand-drawn 2D cartoon st
 
 
 STYLE = os.environ.get("STYLE_OVERRIDE", STYLE)
+if os.environ.get("REFS_URLS"): REFS = os.environ["REFS_URLS"].split(",")
 if os.environ.get("REFS_N"): REFS = REFS[:int(os.environ["REFS_N"])]
 
 
