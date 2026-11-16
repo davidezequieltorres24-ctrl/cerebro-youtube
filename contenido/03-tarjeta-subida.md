@@ -1,7 +1,11 @@
 # Video 3 — datos para subir
 
-**Título:** Por qué pagar con tarjeta te hace gastar más (aunque no lo notes)
-**Miniatura:** canal/assets/video1-miniatura.png ("NO DUELE") — pendiente: rehacerla con el estilo de líneas brillantes del video.
+**Título:** Por qué gastas más cuando pagas con tarjeta
+**Título alternativo (Probar y comparar):** Por qué pagar con tarjeta te hace gastar más
+**Miniaturas (subir las 3 a "Probar y comparar"):**
+- Principal: canal/assets/video3-tarjeta-A-comparacion.jpg ("DUELE / NO DUELE": misma cara en rojo con efectivo y en verde con tarjeta)
+- canal/assets/video3-tarjeta-B-no-lo-ves.jpg ("NO LO VES": cerebro con la tarjeta como venda)
+- canal/assets/video3-tarjeta-C-no-duele.jpg ("NO DUELE": tarjeta gigante + Tú chiquito)
 **Duración:** 4:52 · estilo nuevo (neón + dibujo de líneas brillantes, inspirado en Isaac).
 
 **Descripción:**

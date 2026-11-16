@@ -49,3 +49,11 @@
 5. El texto nunca tapa al personaje. Verificar a 320×180 (tamaño celular).
 6. Probar en la vista previa de vidIQ (equivale a thumbsup.tv) y subir 2 versiones a "Probar y comparar" de YouTube.
 7. Flechas: siempre deben UNIR el texto con el objeto que importa (curva, estilo dibujada a mano, con contorno negro). Nunca apuntar a un espacio vacío.
+
+## Aprendido con el video 3 (estilo líneas brillantes)
+- **Probar siempre en un feed simulado de celular (360×202)** antes de elegir: ahí se ve lo que falla.
+- **Esquina inferior derecha prohibida**: ahí va la duración del video (4:52) y tapa el texto.
+- Un personaje chiquito (tipo "Tú diminuto frente a objeto gigante") **desaparece a tamaño celular** si es de líneas finas → en estilo neón, las caras tienen que ser GRANDES.
+- Lo que más se lee de lejos: **dos caras grandes con emociones opuestas + contraste rojo/verde** (comparación + emoción).
+- Pedir a la IA **líneas más gruesas y brillantes** que en las escenas del video ("THICK bold glowing neon outlines").
+- Texto: letra clara + borde negro grueso + brillo del color (igual que en el video). Fondo oscuro difuminado detrás.
