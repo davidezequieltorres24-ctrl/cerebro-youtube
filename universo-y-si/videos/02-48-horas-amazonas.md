@@ -4,10 +4,13 @@
 **Guion:** `universo-y-si/guiones/02-48-horas-amazonas.md` (~1.370 palabras, ~8:50 estimado).
 **Formato:** lugar extremo real (plantilla B).
 
-**Miniatura principal:** `universo-y-si/assets/02-amazonas-48h-miniatura.jpg`
-- "48 HORAS" amarillo arriba · "TÚ" aterrado con linterna y silbato (flecha verde) · sombra con ojos amarillos "¿JAGUAR?" (flecha verde) · el mono ladrón con la gorra roja.
-- Dibujo IA: `produccion/remotion/public/uys-2/mini-b.png` (alternativa con jaguar visible: `mini-a.png`). Texto y flechas por código.
-- Pendiente: 2 miniaturas más para "Probar y comparar" (ej. "HORA 1 / HORA 48" y la hormiga bala).
+**Miniatura principal (v2):** `universo-y-si/assets/02-amazonas-48h-miniatura.jpg`
+- Composición en tercios: cara de TÚ en el tercio izquierdo con los ojos sobre la línea superior · ojos del jaguar sobre el tercio derecho · "48 HORAS" en el tercio superior derecho ("48" en amarillo) · "TÚ" y "¿JAGUAR?" con flechas verdes.
+- La mirada del chico apunta hacia los ojos → guía la vista del espectador hasta la amenaza.
+- Solo 2 elementos (chico + ojos), contraste naranja cálido vs. verde azulado oscuro, fondo oscurecido detrás del texto, viñeta y grano.
+- Dibujo IA: `produccion/remotion/public/uys-2/mini-d.png` (alternativa: `mini-c.png`, mira a cámara). Texto y flechas por código.
+- Reserva: v1 (`02-amazonas-48h-miniatura-v1.jpg`, con el mono y la linterna; más cargada).
+- Pendiente: 2 miniaturas más para "Probar y comparar".
 
 **Título:** ¿Y si estuvieras 48 horas perdido en la selva amazónica?
 

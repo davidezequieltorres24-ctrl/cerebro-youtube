@@ -81,6 +81,7 @@ Formato: cada escena con título + tiempo, línea **Visual** (qué se anima) y e
 - Estilo de video: **2D plano**, contorno negro, colores planos, viñeta oscura. ~90 planos para 11–12 min (cambio cada 5–10 s), zoom lento, parpadeos, expresiones, lluvia/olas, carteles "DÍA X".
 - Sonido: música según el clima de la escena + canción recurrente + efectos (mar, lluvia, trueno, alarma, golpes, flash). Master −14 LUFS.
 - Miniatura: **estilo distinto al video**: cartoon muy saturado, caras exageradas, etiquetas **"TÚ" / "TU CRUSH" con flechas verdes**, texto corto amarillo arriba (ej. "30 DÍAS A LA DERIVA"); a veces "DÍA 1 / DÍA 30".
+- **Reglas de miniatura aprendidas (video 2):** máx. 2–3 elementos (sacar todo lo que compita) · cara GRANDE en un tercio vertical con los ojos sobre la línea superior · la amenaza en el otro tercio · **la mirada del protagonista apunta a la amenaza** (lleva la vista) · texto en el espacio vacío, sin tapar pelo ni cara, con la palabra clave en amarillo · pedir a la IA la composición exacta en porcentajes ("face centered at 28% from the left…") y verificar con la grilla de tercios.
 - Descripción: párrafo gancho + capítulos con nombres intrigantes + la pregunta + disclaimer en chiste + solo 3 hashtags.
 
 ## Reglas y límites
