@@ -82,6 +82,7 @@ Formato: cada escena con título + tiempo, línea **Visual** (qué se anima) y e
 - Sonido: música según el clima de la escena + canción recurrente + efectos (mar, lluvia, trueno, alarma, golpes, flash). Master −14 LUFS.
 - Miniatura: **estilo distinto al video**: cartoon muy saturado, caras exageradas, etiquetas **"TÚ" / "TU CRUSH" con flechas verdes**, texto corto amarillo arriba (ej. "30 DÍAS A LA DERIVA"); a veces "DÍA 1 / DÍA 30".
 - **Reglas de miniatura aprendidas (video 2):** máx. 2–3 elementos (sacar todo lo que compita) · cara GRANDE en un tercio vertical con los ojos sobre la línea superior · la amenaza en el otro tercio · **la mirada del protagonista apunta a la amenaza** (lleva la vista) · texto en el espacio vacío, sin tapar pelo ni cara, con la palabra clave en amarillo · pedir a la IA la composición exacta en porcentajes ("face centered at 28% from the left…") y verificar con la grilla de tercios.
+- **Flechas:** siempre con `produccion/remotion/flechas.py` (`flecha(img, inicio, control, punta, color)`): trazo grueso, una sola curva, punta grande, contorno negro. Arrancan separadas de la etiqueta y terminan en el BORDE del objeto (nunca en el vacío ni encima de la cara).
 - Descripción: párrafo gancho + capítulos con nombres intrigantes + la pregunta + disclaimer en chiste + solo 3 hashtags.
 
 ## Reglas y límites

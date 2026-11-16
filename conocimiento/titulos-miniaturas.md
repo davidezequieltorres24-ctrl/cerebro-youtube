@@ -48,7 +48,7 @@
 4. **La miniatura NO repite el título: lo completa** (título "parece pobre" → miniatura "LO QUE NO VES" / "$0 vs $$$").
 5. El texto nunca tapa al personaje. Verificar a 320×180 (tamaño celular).
 6. Probar en la vista previa de vidIQ (equivale a thumbsup.tv) y subir 2 versiones a "Probar y comparar" de YouTube.
-7. Flechas: siempre deben UNIR el texto con el objeto que importa (curva, estilo dibujada a mano, con contorno negro). Nunca apuntar a un espacio vacío.
+7. Flechas: siempre deben UNIR el texto con el objeto que importa (curva, estilo dibujada a mano, con contorno negro). Nunca apuntar a un espacio vacío. Usar `produccion/remotion/flechas.py` (trazo grueso, punta grande alineada, sombra); la vieja `curve_arrow` sale finita y con quiebres. Arrancar ~15 px fuera de la etiqueta y terminar en el borde del objeto, sin pisar la cara.
 
 ## Aprendido con el video 3 (estilo líneas brillantes)
 - **Probar siempre en un feed simulado de celular (360×202)** antes de elegir: ahí se ve lo que falla.

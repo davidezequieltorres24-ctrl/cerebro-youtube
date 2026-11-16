@@ -86,7 +86,7 @@ Leer `conocimiento/titulos-miniaturas.md`. Hacer **3 miniaturas con ángulos dis
 2. **Shock + interfaz + header** (ej. "NO LO SENTISTE" + notificaciones del banco + cara agarrándose la cabeza).
 3. **Mascota cerebro + objeto raro + interfaz** (ej. "LA TARJETA TE CIEGA", "TE" en el color de resaltado).
 - La IA hace **solo el dibujo**, ya compuesto para el texto ("TOP THIRD completely EMPTY black", caras en los tercios). Texto, números, tarjetas de app y flechas, por código con la librería de `miniaturas_v3.py` (`bg`, `glowtext`, `fit`, `app_card`, `curve_arrow`, `screen`, `finish`).
-- Checklist: máx. 3 palabras · la miniatura completa el título, no lo repite · caras GRANDES · flecha que une el texto con el objeto · **nada en la esquina inferior derecha** (duración) · probar en un feed simulado de 360×202.
+- Checklist: máx. 3 palabras · la miniatura completa el título, no lo repite · caras GRANDES · flecha que une el texto con el objeto (`flechas.py`: separada de la etiqueta, punta en el borde del objeto) · **nada en la esquina inferior derecha** (duración) · probar en un feed simulado de 360×202.
 - **3 títulos**: principal con "tú" + uno con número fiel al estudio + uno de curiosidad.
 - Guardar en `canal/assets/videoN-<tema>-K-<idea>.jpg`.
 
