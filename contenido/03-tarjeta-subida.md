@@ -2,7 +2,8 @@
 
 **Título:** Por qué gastas más cuando pagas con tarjeta
 **Título alternativo (Probar y comparar):** Por qué pagar con tarjeta te hace gastar más
-**Miniaturas v2 (subir las 3 a "Probar y comparar"):**
+**Miniatura PRINCIPAL (v4, 16/11):** canal/assets/video3-tarjeta-4-caras-87-174.jpg — "$87 → $174": Tú en rojo sufriendo con efectivo vs Tú en verde feliz con tarjeta (pero paga el doble) + tarjeta "Pago aprobado -$174". Combina comparación + número grande + emoción. Imagen base `public/thumb3/m1.png` (APIMart), texto por código.
+**Miniaturas v2 (reserva / "Probar y comparar"):**
 1. canal/assets/video3-tarjeta-1-gastas-x2.jpg — "GASTAS ×2" dorado + cara de shock con la tarjeta + pruebas de app (estilo Isaac)
 2. canal/assets/video3-tarjeta-2-gastos-shock.jpg — tarjeta de app "Gastos con tarjeta $1.240 ↑" + gráfico rojo + Tú agarrándose la cabeza (estilo "820K")
 3. canal/assets/video3-tarjeta-3-87-174.jpg — "EFECTIVO $87 → TARJETA $174" con capturas de pago (estilo "$0 → $21.607")
