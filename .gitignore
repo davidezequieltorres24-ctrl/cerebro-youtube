@@ -1,1 +1,3 @@
 produccion/**/audio/*.wav
+produccion/remotion/node_modules/
+produccion/remotion/words.json

@@ -14,6 +14,7 @@ Leé SOLO el archivo que necesite la tarea.
 | Escribir guion / mejorar retención | `conocimiento/guiones-retencion.md` |
 | Títulos y miniaturas | `conocimiento/titulos-miniaturas.md` |
 | Producir el video con IA (Claude Code, voz, animación) | `conocimiento/produccion-ia.md` |
+| Cómo se VEN los videos de referencia (estilo visual) | `conocimiento/formatos-visuales.md` |
 | Elegir nicho / estrategia de canal | `conocimiento/nichos-estrategia.md` |
 | De dónde salió cada dato | `fuentes.md` |
 

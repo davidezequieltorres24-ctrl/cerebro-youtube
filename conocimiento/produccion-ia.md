@@ -16,3 +16,20 @@
 - Siempre verificar los datos (ver `guiones-retencion.md`).
 - La IA no es la ventaja (todos la tienen). La ventaja son las decisiones de título, apertura, visuales, promesa y verificación.
 - Canales que ya usan estilos 3D/animados: Rick's Clips, Ifverse, Capital Case (Shorts), Depth Theory (largos).
+
+## ✅ Pipeline real usado en el canal (probado 16/11/2026) — `produccion/remotion/`
+1. **Guion** con el formato (ver `guiones-retencion.md`) + datos verificados.
+2. **Voz**: ElevenLabs v4, voz "Carlos – Español Neutro" (`Y4HwpMNrBWN5dFKi5Lw8`). ~490 créditos por 30 s.
+3. **Personajes**: 1 hoja de personajes (Tú + Marcos) → referencia para TODAS las escenas (consistencia). `public/personajes.png`.
+4. **Escenas**: 1 ilustración completa por frase (Gemini 3.1 Flash Image vía ElevenLabs, ~400–600 créditos c/u, conectada a la hoja).
+5. **Stickers**: recortes de la hoja con fondo transparente (`tu-*.png`, `marcos-*.png`) para animar encima.
+6. **Música** (ElevenLabs Music, ~900 créditos) + **SFX** (whoosh, pop, aplausos, caja, tuba triste; 50 créditos c/u).
+7. **Tiempos por palabra**: Whisper local (`faster-whisper small`, `HF_HUB_DISABLE_XET=1`).
+8. **Montaje en Remotion** (`src/ParecePobre.tsx`): Ken Burns, barridos, pantalla dividida, pizarras, contador de dinero, stickers con rebote, monedas 3D con Three.js, subtítulos palabra por palabra.
+9. **Render**: `npx remotion render src/index.ts ParecePobre out/x.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --gl=swangle`
+10. **Audio a −14 LUFS**: `ffmpeg -i in.mp4 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 out.mp4`
+
+### Límites encontrados
+- ElevenLabs gratis: 10.000 créditos/mes y **solo 3 imágenes por día**. Un video de 12–15 min necesita ~60–80 escenas → hace falta plan pago (o repartir en días).
+- Canva genera imágenes pero no deja bajarlas en alta resolución desde aquí.
+- vidIQ: 150 créditos/mes (miniatura = 22).
