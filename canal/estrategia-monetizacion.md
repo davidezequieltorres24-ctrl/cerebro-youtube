@@ -44,7 +44,7 @@ YouTube desmonetiza canales con contenido masivo, repetitivo o de plantilla, y r
 ## 7. Plan de 11 semanas
 | Qué | Ritmo |
 |---|---|
-| Videos largos (10–14 min) | **3 por semana** (lun / mié / vie) → ~30 videos |
+| Videos largos (5–10 min, ideal 8–10) | **3 por semana** (lun / mié / vie) → ~30 videos |
 | Shorts (vertical, con escenas del video largo + gancho propio) | **1 por día** → suscriptores (no suman horas) |
 | Miniatura | 2 versiones por video con "Probar y comparar" de YouTube |
 | Comentarios | Responder todos las primeras 24 h; pregunta al final de cada video |

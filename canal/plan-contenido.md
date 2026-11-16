@@ -46,11 +46,11 @@
 | Por qué la clase media confunde deuda con progreso | ¿PROGRESO? | "10 trampas de la clase media" (92K) |
 
 ## Primeros 5 videos (lanzamiento, misma promesa)
-Orden recomendado (actualizado con datos): **Parece pobre → Tarjeta (#2) → Niveles de sueldo → #1 → Auto nuevo**. Duración objetivo: **12–15 min**.
+Orden recomendado (actualizado con datos): **Parece pobre → Tarjeta (#2) → Niveles de sueldo → #1 → Auto nuevo**. Duración objetivo: **5–10 min** (ideal 8–10).
 
 ## Shorts
 - De cada video largo: 2–3 Shorts de 30–50 s con la escena "Imagina esto" + giro + "video completo en el canal".
 
 ## Calendario
-- Martes y viernes: video largo (12–15 min). Lunes, miércoles y sábado: Short.
+- Martes y viernes: video largo (5–10 min). Lunes, miércoles y sábado: Short.
 - Meta de los primeros 30 días: 8 largos + 15 Shorts.
