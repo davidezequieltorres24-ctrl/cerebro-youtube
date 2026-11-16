@@ -6,7 +6,15 @@
 **Descripción:**
 Te suben el sueldo y piensas que ahora sí todo cambia… pero en cada nivel tu cerebro te tiene preparada una trampa distinta. Subimos de $500 a $10.000: la trampa de cada nivel, el estudio que la explica y cómo salir. Al final, la regla de una línea que las desarma todas.
 
-⏱️ Capítulos: (se completan con los tiempos del render final)
+⏱️ Capítulos
+0:00 Imagina esto
+0:55 Nivel 1 · $500: la trampa de la escasez
+2:13 Nivel 2 · $1.000: el pago mínimo
+3:31 Nivel 3 · $2.500: la bata nueva (efecto Diderot)
+4:51 Nivel 4 · $5.000: las cuotas
+6:21 Nivel 5 · $10.000: las esposas de oro
+7:31 El giro: tu nivel real
+8:15 La regla de una línea
 
 📚 Fuentes
 - Mani, Mullainathan, Shafir y Zhao, "Poverty Impedes Cognitive Function", Science (2013)
