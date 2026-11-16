@@ -43,3 +43,16 @@
 - **Mezcla aprobada**: voz −16 LUFS · efectos normalizados a −26 LUFS y al 45% · música −16 LUFS al 7%. Master final a −14 LUFS.
 - Montaje del video completo: `src/plan.ts` (1 escena por frase, overlays y tableros) + `src/FullVideo.tsx`. Tiempos de frases alineados con Whisper (`src/lines-full.json`).
 - Render: ~1 h 30 min para 7 min de video (4 CPU).
+
+## ⚠️ Lecciones para videos largos (aprendidas con el video 1)
+**Tiempos reales en este servidor (4 núcleos):** ~1.000 cuadros cada 8–10 min → 7 min de video ≈ 1 h 30 – 2 h de render. Un video de 12 min ≈ 3 h.
+1. **Renderizar directo en la calidad final** (sin recodificar después): `npx remotion render ... --crf=18 --x264-preset=medium --audio-codec=aac` y aplicar `loudnorm` solo al audio (`-c:v copy`). Así sale un archivo de ~200–400 MB y no 700 MB.
+2. **Límites de tamaño:** para mandar el archivo por el chat: **máx. 500 MB**. GitHub: **máx. 100 MB por archivo** → al repo va solo una copia liviana (~1,6 Mbps), la versión para YouTube se manda por el chat.
+3. **Lanzar el render como proceso independiente** (`nohup setsid script.sh &`), nunca como tarea en segundo plano con límite de 2 h. Vigilar con un monitor que avise el progreso.
+4. **Nada de `filter: blur()` en transiciones**: duplica el tiempo de render. Barridos con movimiento y opacidad solamente. El 3D (Three.js) solo en escenas cortas.
+5. **Imágenes en JPG de ~2300 px** (no PNG de 2.7K) para que cada cuadro cargue rápido.
+6. **Empezar el render apenas estén voz + escenas**, y escribir el guion del video siguiente mientras renderiza (render = tiempo muerto aprovechable). No correr dos renders a la vez.
+7. **Voz:** ElevenLabs acepta ~3.500 caracteres por pedido → dividir el guion en partes, unirlas con 0,6 s de silencio y después acelerar 1.15.
+8. **APIMart:** las referencias subidas vencen a los 3 días → volver a subir la hoja de personajes en cada video nuevo (`refs.json`).
+9. **Escenas:** pedir "no readable text" porque igual a veces aparece texto en inglés; revisar la hoja de contactos antes de montar.
+10. **Calendario realista para 3 videos/semana:** día 1 guion + voz + escenas (~2 h de trabajo) · día 1–2 render (~3 h) · día 2 subir + Shorts.
