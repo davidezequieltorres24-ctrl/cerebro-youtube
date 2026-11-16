@@ -60,11 +60,15 @@ Seguir `conocimiento/guiones-retencion.md`. La estructura que funcionó en el vi
    - Imagen: `img` + `z` (zoom), `fx/fy` (foco), `tint` (`red`/`green`), `labels` que aparecen en la palabra `at`, `stamp` `'P'`/`'S'` (sello PROBLEMA/SOLUCIÓN), `leak` (destello de transición), `beats` (latidos).
    - Texto: `b:{k:'title'|'big'|'value'|'year'|'map'|'bills'|'brain'|'rule'|…}` → palabra gigante, número que cuenta, año, mapa de 3 partes, billetes contados, cerebro, regla final.
    - Sonido: `sfx` con `at` (palabra) → whoosh en cada imagen, **riser** antes de una revelación, **impact** en la palabra clave, pop en listas.
-3. Reglas que ya se corrigieron (no repetirlas):
+3. **Citas de libros y estadísticas** (modelo: `src/Muestra.tsx`, comp. `Muestra`):
+   - **Libro**: imagen fija `public/muestra/libro.jpg` (libro de neón con la tapa en blanco, reutilizable, US$0,04 una sola vez) + por código: chip "LIBRO", título, autor y año, y recuadro que se dibuja con la idea **parafraseada** (sin comillas si no es textual) + remate en rojo.
+   - **Estadística**: 100 % código (US$0). Chip "ESTUDIO · institución año", pregunta, barras que crecen con contador, línea guía al nivel menor y número gigante del resultado ("×2,1") con riser + impact. **Fuente abajo en gris** (autor, revista, año y qué se midió).
+   - Cada cifra verificada contra la fuente antes de animarla (redondear con "~" si las fuentes difieren).
+4. Reglas que ya se corrigieron (no repetirlas):
    - Textos animados letra por letra **agrupados por palabra** (nunca "CUERP/O"). Títulos ajustados a 1 renglón, con el subrayado debajo del texto y del mismo ancho.
    - Subtítulos **por frase completa** (`captionChunks.ts`): solo en escenas con imagen.
    - Cada imagen dura **≥ 2 s**. Nada de `blur` grande en transiciones (duplica el render).
-4. **Revisión antes del render** (obligatoria):
+5. **Revisión antes del render** (obligatoria):
    - Listar el texto hablado de cada escena y ver que la imagen coincide con lo que se dice.
    - `npx remotion still src/index.ts VideoN out.jpg --frame=N --scale=0.5 --browser-executable=… --gl=swangle` en el inicio y el final de cada escena → hoja de contactos → revisar orden, textos cortados y superposiciones.
 
