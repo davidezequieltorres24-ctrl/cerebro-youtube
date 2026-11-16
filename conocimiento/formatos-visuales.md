@@ -25,3 +25,10 @@
 4. Subtítulo palabra por palabra con la palabra clave en verde billete.
 5. Efectos de sonido en cada cambio (whoosh, pop, caja registradora) + música de fondo baja.
 6. Pizarras/carteles para números y datos.
+
+## Isaac ("How I Actually Edit Viral Videos") — solo 3 fotogramas + miniatura (16/11/2026)
+- Mezcla **cámara propia** (no es faceless) con **clips de películas/series** como b-roll (ej. Breaking Bad). ⚠️ Nosotros NO: derechos de autor → usar stock libre (Openverse: CC0) o escenas IA.
+- **Overlays de fuego/luz** encima de la imagen (destello naranja vertical sobre el personaje).
+- **Texto integrado manuscrito con brillo neón**, dos colores (amarillo + celeste), al costado del sujeto y no centrado ("it wasn't good").
+- Miniatura: personaje con cabeza ilustrada sobre cuerpo realista, texto 3D amarillo con brillo de fuego, fondo de línea de tiempo de edición en perspectiva.
+- Falta ver: ritmo de cortes, cuánto stock usa, transiciones → necesita capturas del dueño (YouTube pide captcha desde el servidor; vidIQ "mirar video" = 25 créditos).
