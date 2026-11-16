@@ -10,7 +10,12 @@
 - Solo 2 elementos (chico + ojos), contraste naranja cálido vs. verde azulado oscuro, fondo oscurecido detrás del texto, viñeta y grano.
 - Dibujo IA: `produccion/remotion/public/uys-2/mini-d.png` (alternativa: `mini-c.png`, mira a cámara). Texto y flechas por código.
 - Reserva: v1 (`02-amazonas-48h-miniatura-v1.jpg`, con el mono y la linterna; más cargada).
-**Probar y comparar (subir las 3):**
+**Portadas REALISTAS estilo póster (16/11, pedido del dueño; refs: "Nothing Survives" + póster "Claws"):**
+- `assets/02-amazonas-48h-real-a-perdido.jpg` — "48 HORAS" (rojo) / "PERDIDO" (blanco) + jaguar gigante en la niebla y TÚ corriendo con la linterna.
+- `assets/02-amazonas-48h-real-b-sobrevive.jpg` — "SOBREVIVE" (blanco) / "48 HORAS" (rojo) + cara enorme del jaguar con ojos que brillan y TÚ de espaldas con la linterna.
+- Fuente Anton (`canal/assets/fuentes/Anton-Regular.ttf`, licencia OFL). Dibujos: `produccion/remotion/public/uys-2/real/real-a/b.png`.
+
+**Probar y comparar (cartoon, alternativas):**
 1. `assets/02-amazonas-48h-miniatura.jpg` — "48 HORAS" + TÚ aterrado mirando unos ojos "¿JAGUAR?" (curiosidad + emoción). Principal.
 2. `assets/02-amazonas-48h-miniatura-2-hora1-hora48.jpg` — "HORA 1 → HORA 48": TÚ feliz con selfie de día vs. TÚ destruido bajo la lluvia (comparación + número).
 3. `assets/02-amazonas-48h-miniatura-3-hormiga.jpg` — "24 H DE DOLOR": hormiga bala gigante + TÚ llorando con la mano hinchada (objeto raro + shock).
